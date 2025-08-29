@@ -1,195 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aitian Ma - Research Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aitian Ma | Research Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 font-['Inter'] text-gray-800">
-    <div class="max-w-5xl mx-auto px-4 py-12">
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900">Aitian Ma 🚀</h1>
-            <p class="text-xl text-gray-600 mt-2">PhD Candidate in Computer Science | ML Systems & Distributed AI Research</p>
-            <p class="text-gray-500 mt-1">📍 Miami, FL | 📧 <a href="mailto:ama003@fiu.edu" class="text-blue-600 hover:underline">ama003@fiu.edu</a> | 
-            <a href="https://www.linkedin.com/in/aitian-ma-4267404a/" class="text-blue-600 hover:underline">LinkedIn</a> | 
-            <a href="#" class="text-blue-600 hover:underline">Google Scholar</a></p>
-        </header>
 
-        <!-- Research Focus -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">🎯 Research Focus</h2>
-            <p class="text-gray-700 mb-4">I'm passionate about Large Model Systems, Distributed AI, and Algorithm-System Co-design, bridging cutting-edge AI research with real-world deployment challenges. My work spans ultra-lightweight edge AI to large-scale distributed inference systems.</p>
-            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Core Research Areas</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Large Model Inference & Training - Distributed systems for efficient LLM deployment</li>
-                <li>Edge AI & Resource-Constrained Systems - Ultra-lightweight models for IoT and mobile devices</li>
-                <li>Algorithm-System Co-design - End-to-end optimization for production ML systems</li>
-                <li>Time Series Forecasting - Advanced neural architectures for temporal data</li>
-            </ul>
-        </section>
-
-        <!-- Featured Research Projects -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">🌟 Featured Research Projects</h2>
-            
-            <!-- LLMNet -->
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold text-gray-900">🤖 LLMNet: Distributed LLM Inference System</h3>
-                <p class="text-gray-600 italic">Collaboration with Yale University</p>
-                <p class="text-gray-700 mt-2">A distributed inference framework leveraging multi-path Chain-of-Thought reasoning with 40% latency reduction through efficient memory management and parallel processing.</p>
-                <p class="text-gray-700 mt-2"><strong>Key Innovations:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>Dual-mind architecture balancing efficiency and reasoning depth</li>
-                    <li>Deployment across heterogeneous compute environments (NS-3, Cooja, TOSSIM, OMNeT++)</li>
-                    <li>40% accuracy improvement over baseline systems</li>
-                </ul>
-                <p class="text-gray-700 mt-2"><strong>Tech Stack:</strong> PyTorch, Distributed Training, CUDA, C++</p>
-            </div>
-
-            <!-- LORADOCTOR -->
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold text-gray-900">📊 LORADOCTOR: Large-Scale IoT Data Processing</h3>
-                <p class="text-gray-600 italic">Collaboration with UCL</p>
-                <p class="text-gray-700 mt-2">High-throughput LLM-based system processing 840K+ real-time sensor records with sub-second inference latency and adaptive policy generation.</p>
-                <p class="text-gray-700 mt-2"><strong>Key Achievements:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>65% error reduction through optimized model serving</li>
-                    <li>Scalable deployment architecture for concurrent IoT data streams</li>
-                    <li>Real-time causal analysis pipeline</li>
-                </ul>
-                <p class="text-gray-700 mt-2"><strong>Tech Stack:</strong> PyTorch, Apache Kafka, Elasticsearch, Kubernetes</p>
-            </div>
-
-            <!-- MixLinear -->
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold text-gray-900">⚡ MixLinear: Ultra-Lightweight Time Series Forecasting</h3>
-                <p class="text-gray-700 mt-2">Revolutionary approach to edge AI forecasting, reducing complexity from O(n²) to O(n) while maintaining full representational capacity.</p>
-                <p class="text-gray-700 mt-2"><strong>Breakthrough Results:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>State-of-the-art accuracy with only 0.1K parameters (81% reduction)</li>
-                    <li>16.2% accuracy improvements with 3.2× inference speedup</li>
-                    <li>Enables sophisticated forecasting on mobile devices and IoT sensors</li>
-                </ul>
-                <p class="text-gray-700 mt-2"><strong>Tech Stack:</strong> PyTorch, ONNX, TensorRT, Edge Deployment</p>
-            </div>
-
-            <!-- MMFNet -->
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold text-gray-900">🌊 MMFNet: Multi-Scale Masked Frequency Network</h3>
-                <p class="text-gray-700 mt-2">Advanced neural architecture addressing local-global pattern capture across extended time horizons through novel Multi-scale Masked Frequency Transformation.</p>
-                <p class="text-gray-700 mt-2"><strong>Technical Contributions:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>DCT-based multi-scale decomposition with adaptive masking</li>
-                    <li>Up to 6.0% MSE reduction across benchmark datasets</li>
-                    <li>Learnable spectral filtering superiority over fixed frequency methods</li>
-                </ul>
-                <p class="text-gray-700 mt-2"><strong>Tech Stack:</strong> PyTorch, Signal Processing, Distributed Systems</p>
-            </div>
-
-            <!-- LLM-NADA -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold text-gray-900">🔄 LLM-NADA: Multi-Agent Distributed Training</h3>
-                <p class="text-gray-700 mt-2">Zero-shot domain adaptation framework with distributed multi-agent orchestration and adversarial training optimization.</p>
-                <p class="text-gray-700 mt-2"><strong>Performance Gains:</strong></p>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>40% higher training efficiency through gradient compression</li>
-                    <li>Asynchronous parameter updates with fault-tolerant serving</li>
-                    <li>Validated on 50-node industrial cluster</li>
-                </ul>
-                <p class="text-gray-700 mt-2"><strong>Tech Stack:</strong> PyTorch, DDP, DeepSpeed, Ray, Kubernetes</p>
-            </div>
-        </section>
-
-        <!-- Research Impact & Publications -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">📈 Research Impact & Publications</h2>
-            <p class="text-gray-700 mb-4"><strong>Total Publications:</strong> 8+ peer-reviewed papers | <strong>Collaborations:</strong> Yale University, UCL, NEC</p>
-            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">🏆 Recent Publications</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Parametric Augmentation for Time Series Contrastive Learning - ICLR 2024</li>
-                <li>AutoTCL: Automated Time Series Contrastive Learning - AI4TS Best Paper Award 2023</li>
-                <li>Adapting Wireless Network Configuration - IEEE Transactions on Networking 2023</li>
-            </ul>
-            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">📝 Under Review (First Author)</h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Zero-shot Industrial Wireless Mesh Network Configuration via Dual-Mind LLMs</li>
-                <li>LORADOCTOR: LLM-Driven Diagnosis and Adaptive Policy Optimization</li>
-                <li>MixLinear: Extreme Low Resource Multivariate Time Series Forecasting</li>
-                <li>MMFNet: Multi-Scale Frequency Masking Neural Network</li>
-            </ul>
-        </section>
-
-        <!-- Technical Expertise -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">💻 Technical Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <p class="text-gray-700 font-semibold">ML Systems:</p>
-                    <p class="text-gray-700">PyTorch, TensorFlow, Distributed Training, Model Optimization</p>
-                </div>
-                <div>
-                    <p class="text-gray-700 font-semibold">High Performance:</p>
-                    <p class="text-gray-700">CUDA, C++, Performance Profiling, Memory Optimization</p>
-                </div>
-                <div>
-                    <p class="text-gray-700 font-semibold">Infrastructure:</p>
-                    <p class="text-gray-700">Kubernetes, Docker, Apache Kafka, Microservices</p>
-                </div>
-                <div>
-                    <p class="text-gray-700 font-semibold">Big Data:</p>
-                    <p class="text-gray-700">Apache Spark, Elasticsearch, Real-time Processing, ETL</p>
-                </div>
-                <div>
-                    <p class="text-gray-700 font-semibold">Deployment:</p>
-                    <p class="text-gray-700">TorchServe, TensorRT, ONNX, Cloud Platforms</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Academic Journey -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">🎯 Academic Journey</h2>
-            <p class="text-gray-700"><strong>PhD in Computer Science</strong> | Florida International University | Jan 2022 – May 2026</p>
-            <p class="text-gray-700 mt-2">Focus: Large Model Systems, Distributed AI, Algorithm-System Co-design</p>
-            <p class="text-gray-700">NSF Research: Advancing Network Configuration and Runtime Adaptation Methods</p>
-            <p class="text-gray-700 mt-4"><strong>Industry Background:</strong> 8+ years at Chinese Academy of Sciences & Ericsson</p>
-            <ul class="list-disc list-inside text-gray-700">
-                <li>Built petabyte-scale data infrastructure processing 10TB+ daily</li>
-                <li>Architected distributed systems with 99.9% uptime</li>
-            </ul>
-        </section>
-
-        <!-- Open to Collaboration -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">🤝 Open to Collaboration</h2>
-            <p class="text-gray-700 mb-4">I'm actively seeking opportunities to:</p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li><strong>Academic Positions:</strong> Postdoc and faculty roles in ML systems research</li>
-                <li><strong>Research Collaborations:</strong> Joint projects on distributed AI and edge computing</li>
-                <li><strong>Open Source:</strong> Contributing to impactful ML systems projects</li>
-                <li><strong>Mentoring:</strong> Guiding students in AI systems research</li>
-            </ul>
-        </section>
-
-        <!-- Let's Connect -->
-        <section class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">📬 Let's Connect!</h2>
-            <p class="text-gray-700 mb-4">Interested in my research? I'm always excited to discuss:</p>
-            <ul class="list-disc list-inside text-gray-700 mx-auto max-w-md">
-                <li>Large model inference optimization</li>
-                <li>Edge AI deployment challenges</li>
-                <li>Algorithm-system co-design opportunities</li>
-                <li>Time series forecasting innovations</li>
-            </ul>
-            <p class="text-gray-700 mt-4">📧 <a href="mailto:ama003@fiu.edu" class="text-blue-600 hover:underline">ama003@fiu.edu</a> | 
-            <a href="https://linkedin.com/in/aitian-ma" class="text-blue-600 hover:underline">LinkedIn</a> | 
-            <a href="#" class="text-blue-600 hover:underline">Google Scholar</a></p>
-        </section>
+<body class="bg-white font-['Inter'] text-gray-800">
+  <!-- Navigation -->
+  <nav class="border-b border-gray-200 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-gray-900">Aitian Ma</h1>
+      <div class="space-x-6 text-gray-700 font-medium">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#research" class="hover:text-blue-600">Research</a>
+        <a href="#publications" class="hover:text-blue-600">Publications</a>
+        <a href="#cv" class="hover:text-blue-600">CV</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
     </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section id="about" class="text-center mb-16">
+      <img src="assets/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto shadow-md mb-4">
+      <h2 class="text-3xl font-bold text-gray-900">Aitian Ma 🚀</h2>
+      <p class="text-lg text-gray-600 mt-2">PhD Candidate, Computer Science<br>Florida International University</p>
+      <p class="text-gray-500 mt-3">
+        📍 Miami, FL · 📧 <a href="mailto:ama003@fiu.edu" class="text-blue-600 hover:underline">ama003@fiu.edu</a> · 
+        <a href="https://www.linkedin.com/in/aitian-ma-4267404a/" class="text-blue-600 hover:underline">LinkedIn</a> ·
+        <a href="#" class="text-blue-600 hover:underline">Google Scholar</a>
+      </p>
+    </section>
+
+    <!-- Research Focus -->
+    <section id="research" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">Research Interests</h2>
+      <p class="text-gray-700 mb-4">
+        My research lies at the intersection of Large Model Systems, Distributed AI, and Algorithm-System Co-design. 
+        I focus on bridging cutting-edge AI research with practical deployment challenges, spanning 
+        ultra-lightweight edge AI to large-scale distributed inference systems.
+      </p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Distributed LLM inference & efficient training</li>
+        <li>Edge AI and ultra-lightweight models</li>
+        <li>Algorithm-system co-design for ML production</li>
+        <li>Time series forecasting architectures</li>
+      </ul>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">Selected Projects</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">🤖 LLMNet: Distributed LLM Inference</h3>
+          <p class="text-gray-600 italic">Collaboration with Yale University</p>
+          <p class="text-gray-700 mt-2">A distributed inference framework with dual-mind architecture, achieving 40% latency reduction and improved reasoning performance across heterogeneous compute environments.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">📊 LORADOCTOR: Large-Scale IoT Optimization</h3>
+          <p class="text-gray-600 italic">Collaboration with UCL</p>
+          <p class="text-gray-700 mt-2">An LLM-based system for adaptive IoT policy generation, processing 840K+ sensor records in real time with 65% error reduction.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">⚡ MixLinear: Ultra-Lightweight Forecasting</h3>
+          <p class="text-gray-700 mt-2">Introduced a forecasting model with complexity reduced from O(n²) to O(n), enabling edge deployment with only 0.1K parameters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">Publications</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>Parametric Augmentation for Time Series Contrastive Learning</strong> – ICLR 2024</li>
+        <li><strong>AutoTCL: Automated Time Series Contrastive Learning</strong> – AI4TS Best Paper Award 2023</li>
+        <li><strong>Adapting Wireless Network Configuration</strong> – IEEE Transactions on Networking 2023</li>
+      </ul>
+      <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Under Review (First Author)</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Zero-shot Industrial Wireless Mesh Network Configuration via Dual-Mind LLMs</li>
+        <li>LORADOCTOR: LLM-Driven Diagnosis and Adaptive Policy Optimization</li>
+        <li>MixLinear: Extreme Low Resource Multivariate Time Series Forecasting</li>
+      </ul>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2">CV</h2>
+      <p class="text-gray-700 mb-4">Download my latest CV here:</p>
+      <a href="assets/AitianMa_CV.pdf" class="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700">Download CV</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mb-12 text-center">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Contact</h2>
+      <p class="text-gray-700">📧 <a href="mailto:ama003@fiu.edu" class="text-blue-600 hover:underline">ama003@fiu.edu</a></p>
+      <p class="text-gray-700">🌐 <a href="https://linkedin.com/in/aitian-ma" class="text-blue-600 hover:underline">LinkedIn</a></p>
+      <p class="text-gray-700">📄 <a href="#" class="text-blue-600 hover:underline">Google Scholar</a></p>
+    </section>
+  </main>
 </body>
-
 </html>
-
