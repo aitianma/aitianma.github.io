@@ -1,5 +1,3 @@
-<div align="center">
-
 # 👋 Aitian Ma (马艾田)
 
 ### Ph.D. Candidate in Computer Science
@@ -8,28 +6,15 @@
 
 📍 Miami, FL, USA | 🎯 **On the Job Market (2025-2026)**
 
----
-
-<p align="center">
-  <a href="#-about-me">About</a> •
-  <a href="#-publications">Publications</a> •
-  <a href="#-awards--honors">Awards</a> •
-  <a href="#-experience">Experience</a> •
-  <a href="#-teaching--mentoring">Teaching</a> •
-  <a href="#-technical-skills">Skills</a> •
-  <a href="#-lets-connect">Contact</a>
-</p>
-
----
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aitian-ma-4267404a/)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en)
-[![GitHub](https://img.shields.io/badge/GitHub-aitianma-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aitianma)
-[![Email](https://img.shields.io/badge/Email-ama003@fiu.edu-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ama003@fiu.edu)
-
-![Profile Views](https://komarev.com/ghpvc/?username=aitianma&color=blueviolet&style=flat-square&label=Profile+Views)
-
+<div align="center">
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aitian-ma-4267404a/)
+  [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en)
+  [![GitHub](https://img.shields.io/badge/GitHub-aitianma-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aitianma)
+  [![Email](https://img.shields.io/badge/Email-ama003@fiu.edu-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ama003@fiu.edu)
+  <br>
+  ![Profile Views](https://komarev.com/ghpvc/?username=aitianma&color=blueviolet&style=flat-square&label=Profile+Views)
 </div>
+
 
 ---
 
@@ -356,22 +341,12 @@ Before joining FIU, I earned my M.S. from Beijing University of Technology and w
 ---
 
 <div align="center">
+<p><strong>I'm actively seeking faculty positions and research scientist roles in AIoT, wireless sensing, and adaptive systems.</strong><br>
+Feel free to reach out for collaboration or discussion!</p>
 
-## 📬 Let's Connect!
+<a href="https://www.linkedin.com/in/aitian-ma-4267404a/">
+<img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
 
-> **I'm actively seeking faculty positions and research scientist roles in AIoT, wireless sensing, and adaptive systems.**  
-> Feel free to reach out for collaboration or discussion!
-
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aitian-ma-4267404a/)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ama003@fiu.edu)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Follow-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en)
-
-<br>
-
----
-
-*Last Updated: October 2025*
-
+<p><em>Last Updated: October 2025</em></p>
 </div>
