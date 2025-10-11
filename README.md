@@ -4,13 +4,22 @@
 💡 *AIoT & Wireless Sensing | Machine Learning Application | Edge Intelligence*  
 📍 Miami, FL, USA  
 📧 ama003@fiu.edu  
+🚀 **Actively on the Job Market — Open to Faculty & Research Scientist Positions (2025–2026)**  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-blue?logo=linkedin)](https://linkedin.com/in/aitian-ma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-blue?logo=linkedin)](https://www.linkedin.com/in/aitian-ma-4267404a/)
 [![GitHub](https://img.shields.io/badge/GitHub-aitianma-black?logo=github)](https://github.com/aitianma)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar)](#)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar)](https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en)
+[![Email](https://img.shields.io/badge/Email-ama003%40fiu.edu-red?logo=gmail)](mailto:ama003@fiu.edu)
 
 ---
 
+## 🚀 Open to Opportunities
+I am currently **on the academic and research job market (2025–2026)**.  
+I am seeking **tenure-track faculty**, **research scientist**, or **AI/IoT systems engineering** roles where I can apply my expertise in **AIoT**, **wireless sensing**, and **edge learning systems**.  
+
+If your group or organization is looking for someone with a strong background in **machine learning for wireless systems**, **adaptive AI**, and **cyber-physical integration**, I’d love to connect.
+
+---
 
 ## 👋 About Me
 I am a **Ph.D. Candidate in Computer Science** at the **Knight Foundation School of Computing and Information Sciences (KFSCIS)**, **Florida International University (FIU)**, advised by **Dr. Mo Sha**, focusing on **reliable sensing, adaptive learning, and AIoT systems**.
@@ -160,9 +169,10 @@ My research integrates **wireless networking**, **edge AI**, and **learning-base
 ---
 
 ### 🌐 Let’s Connect
-I’m always open to collaborations in **AIoT, wireless sensing, and adaptive systems**.  
-Feel free to connect or reach out — I’d love to chat about research or new ideas!
+I’m currently **on the job market** and open to **faculty and research scientist opportunities** in **AIoT, wireless sensing, and adaptive systems**.  
+Feel free to connect — I’d love to chat about research, collaboration, or new ideas!
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-blue?logo=linkedin)](https://linkedin.com/in/aitian-ma)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aitian--ma-blue?logo=linkedin)](https://www.linkedin.com/in/aitian-ma-4267404a/)
 [![GitHub](https://img.shields.io/badge/GitHub-aitianma-black?logo=github)](https://github.com/aitianma)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar)](https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en)
 [![Email](https://img.shields.io/badge/Email-ama003%40fiu.edu-red?logo=gmail)](mailto:ama003@fiu.edu)
