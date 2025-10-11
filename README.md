@@ -1,6 +1,6 @@
 <div align="center">
 
-[//]: # (<img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_USERNAME?v=4" alt="Aitian Ma" width="200" style="border-radius: 50%;">)
+<img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_USERNAME?v=4" alt="Aitian Ma" width="200" style="border-radius: 50%;">
 
 # Aitian Ma (马艾田)
 
@@ -41,7 +41,7 @@ Before joining FIU, I earned my M.S. from Beijing University of Technology and w
 <table>
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=ICMLA+2025" alt="ICMLA 2025" width="100%">
+<img src="https://via.placeholder.com/480x270/4A90E2/FFFFFF?text=ICMLA+2025" alt="ICMLA 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -55,7 +55,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=DCOSS-IoT+2025" alt="DCOSS-IoT 2025" width="100%">
+<img src="https://via.placeholder.com/480x270/50C878/FFFFFF?text=DCOSS-IoT+2025" alt="DCOSS-IoT 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -70,7 +70,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=MetroLivEnv+2025" alt="MetroLivEnv 2025" width="100%">
+<img src="https://via.placeholder.com/480x270/9B59B6/FFFFFF?text=MetroLivEnv+2025" alt="MetroLivEnv 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -83,7 +83,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/E74C3C/FFFFFF?text=ACM+SAC+2025" alt="ACM SAC 2025" width="100%">
+<img src="https://via.placeholder.com/480x270/E74C3C/FFFFFF?text=ACM+SAC+2025" alt="ACM SAC 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -97,7 +97,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/F39C12/FFFFFF?text=ICCCN+2024" alt="ICCCN 2024" width="100%">
+<img src="https://via.placeholder.com/480x270/F39C12/FFFFFF?text=ICCCN+2024" alt="ICCCN 2024" width="100%">
 </td>
 <td width="70%">
 
@@ -111,7 +111,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/3498DB/FFFFFF?text=ICLR+2024" alt="ICLR 2024" width="100%">
+<img src="https://via.placeholder.com/480x270/3498DB/FFFFFF?text=ICLR+2024" alt="ICLR 2024" width="100%">
 </td>
 <td width="70%">
 
@@ -125,7 +125,7 @@ Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Don
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/1ABC9C/FFFFFF?text=AI4TS+2023" alt="AI4TS 2023" width="100%">
+<img src="https://via.placeholder.com/480x270/1ABC9C/FFFFFF?text=AI4TS+2023" alt="AI4TS 2023" width="100%">
 </td>
 <td width="70%">
 
@@ -143,7 +143,7 @@ Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Don
 <table>
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/300x200/34495E/FFFFFF?text=IEEE+ToN+2024" alt="IEEE ToN 2024" width="100%">
+<img src="https://via.placeholder.com/480x270/34495E/FFFFFF?text=IEEE+ToN+2024" alt="IEEE ToN 2024" width="100%">
 </td>
 <td width="70%">
 
