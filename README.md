@@ -38,18 +38,6 @@ My research integrates **wireless networking**, **edge AI**, and **learning-base
 - AI for Internet of Things (AIoT)  
 - Intelligent Cyber-Physical Systems  
 
-## 🎓 Education
-
-- **Florida International University**, Miami, FL, USA  
-  *Ph.D. in Computer Science* (Expected May 2026)  
-  *Thesis:* Creating Reliable and Adaptive Wireless Sensing Systems via Resource-Efficient Learning  
-  *Advisor:* Mo Sha  
-  *Committee:* Mo Sha (Chair), Deng Pan, Xuyu Wang, Mohammad Ashiqur Rahman  
-
-- **Beijing University of Technology**, Beijing, China  
-  *M.S. in Computer Science* (Sept 2010 – June 2013)  
-  *Thesis:* The Research and Implementation of Finite Element Analysis Simulation System  
-  *Advisor:* Ruihua Di  
 
 
 ---
