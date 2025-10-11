@@ -53,7 +53,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/480x270/50C878/FFFFFF?text=DCOSS-IoT+2025" alt="DCOSS-IoT 2025" width="100%">
+<img src="images/2loratemp.png" alt="DCOSS-IoT 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -68,7 +68,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/480x270/9B59B6/FFFFFF?text=MetroLivEnv+2025" alt="MetroLivEnv 2025" width="100%">
+<img src="images/3loraenv.png" alt="MetroLivEnv 2025" width="100%">
 </td>
 <td width="70%">
 
@@ -81,7 +81,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/480x270/E74C3C/FFFFFF?text=ACM+SAC+2025" alt="ACM SAC 2025" width="100%">
+<img src="images/4wmncda.png" alt="ACM SAC 2025" width="100%">
 </td>
 <td width="70%">
 
