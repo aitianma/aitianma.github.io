@@ -1,6 +1,4 @@
-<div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_USERNAME?v=4" alt="Aitian Ma" width="200" style="border-radius: 50%;">
 
 # Aitian Ma (马艾田)
 
@@ -16,7 +14,7 @@ Florida International University
 **🎯 Actively on the Job Market (2025-2026)**  
 *Seeking Faculty & Research Scientist Positions*
 
-</div>
+
 
 ---
 
@@ -223,7 +221,6 @@ skills = {
 
 ---
 
-<div align="center">
 
 ### 📬 Let's Connect!
 
@@ -237,4 +234,4 @@ Feel free to reach out for collaboration or discussion!
 
 ![Profile Views](https://komarev.com/ghpvc/?username=aitianma&color=blueviolet&style=flat-square&label=Profile+Views)
 
-</div>
+
