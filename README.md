@@ -57,38 +57,63 @@ My research integrates **wireless networking**, **edge AI**, and **learning-base
 ## 📚 Publications
 
 ### 🧩 Conference Papers
-- **[C7]** Dongyi Ma, **Aitian Ma** (co-first author), Sirui Luo, *et al.*  
-  “LLM-Driven Diagnosis and Adaptive Policy Optimization for Reducing Packet Error Rate in LoRaWAN Networks,”  
-  *IEEE ICMLA 2025* — *Acceptance Ratio: 16.6%*
 
-- **[C6]** **Aitian Ma**, Jean Tonday Rodriguez, Mo Sha, Dongsheng Luo,  
-  “Sensorless Air Temperature Sensing Using LoRa Link Characteristics,”  
-  *IEEE DCOSS-IoT 2025* — *Best Paper Award Nominee*  
+- **[C7]** Dongyi Ma, **Aitian Ma** (co-first author), Sirui Luo, Martin de Jode, Andrew Hudson-Smith, and Mo Sha.  
+  “LLM-Driven Diagnosis and Adaptive Policy Optimization for Reducing Packet Error Rate in LoRaWAN Networks.”  
+  *IEEE International Conference on Machine Learning and Applications (ICMLA)*,  
+  Special Session on Deep Learning and Applications, December 2025.  
+  *Acceptance ratio: 15/90 = 16.6%.*
 
-- **[C5]** **Aitian Ma**, Jean Tonday Rodriguez, Mo Sha,  
-  “A LoRa-Based Energy-Harvesting Sensing System for Living Environment,”  
-  *IEEE MetroLivEnv 2025*  
+---
 
-- **[C4]** **Aitian Ma**, Mo Sha,  
-  “WMN-CDA: Contrastive Domain Adaptation for Wireless Mesh Network Configuration,”  
-  *ACM/SIGAPP SAC 2025*  
+- **[C6]** **Aitian Ma**, Jean Tonday Rodriguez, Mo Sha, and Dongsheng Luo.  
+  “Sensorless Air Temperature Sensing Using LoRa Link Characteristics.”  
+  *IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)*, June 2025.  
+  *Acceptance ratio: 26/110 = 23.6%.*  
+  🏆 **Best Paper Award Nominee**
 
-- **[C3]** **Aitian Ma**, Jean Tonday Rodriguez, Mo Sha,  
-  “Enabling Reliable Environmental Sensing with LoRa, Energy Harvesting, and Domain Adaptation,”  
-  *IEEE ICCCN 2024*  
+---
 
-- **[C2]** Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, *et al.*,  
-  “Parametric Augmentation for Time Series Contrastive Learning,”  
-  *ICLR 2024*  
+- **[C5]** **Aitian Ma**, Jean Tonday Rodriguez, and Mo Sha.  
+  “A LoRa-Based Energy-Harvesting Sensing System for Living Environment.”  
+  *IEEE International Workshop on Metrology for Living Environment (MetroLivEnv)*, June 2025.
 
-- **[C1]** Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, *et al.*,  
-  “AutoTCL: Automated Time Series Contrastive Learning with Adaptive Augmentations,”  
-  *AI4TS 2023* — *Best Paper Award*
+---
+
+- **[C4]** **Aitian Ma** and Mo Sha.  
+  “WMN-CDA: Contrastive Domain Adaptation for Wireless Mesh Network Configuration.”  
+  *ACM/SIGAPP Symposium On Applied Computing (SAC)*, Cyber-Physical Systems Track, March 2025.  
+  *Acceptance ratio: 5/21 = 23.8%.*
+
+---
+
+- **[C3]** **Aitian Ma**, Jean Tonday Rodriguez, and Mo Sha.  
+  “Enabling Reliable Environmental Sensing with LoRa, Energy Harvesting, and Domain Adaptation.”  
+  *IEEE International Conference on Computer Communications and Networks (ICCCN)*, July 2024.  
+  *Acceptance ratio: 47/157 = 29.9%.*
+
+---
+
+- **[C2]** Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Dongsheng Luo.  
+  “Parametric Augmentation for Time Series Contrastive Learning.”  
+  *International Conference on Learning Representations (ICLR)*, May 2024.  
+  *Acceptance ratio: 2260/7262 = 31.1%.*
+
+---
+
+- **[C1]** Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Dongsheng Luo.  
+  “AutoTCL: Automated Time Series Contrastive Learning with Adaptive Augmentations.”  
+  *The Second Workshop of Artificial Intelligence for Time Series Analysis: Theory, Algorithms, and Applications (AI4TS)*, August 2023.  
+  🏆 **Best Paper Award**
+
+---
 
 ### 🧠 Journal Papers
-- **[J1]** Junyang Shi, **Aitian Ma**, Xia Cheng, Mo Sha, Xi Peng,  
-  “Adapting Wireless Network Configuration from Simulation to Reality via Deep Learning based Domain Adaptation,”  
-  *IEEE/ACM Transactions on Networking*, Vol. 32, Issue 3, pp. 1983–1998, June 2024
+
+- **[J1]** Junyang Shi, **Aitian Ma**, Xia Cheng, Mo Sha, and Xi Peng.  
+  “Adapting Wireless Network Configuration from Simulation to Reality via Deep Learning based Domain Adaptation.”  
+  *IEEE/ACM Transactions on Networking*, Vol. 32, Issue 3, pp. 1983–1998, June 2024.
+
 
 ---
 
