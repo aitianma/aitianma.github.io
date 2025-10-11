@@ -39,7 +39,7 @@ Before joining FIU, I earned my M.S. from Beijing University of Technology and w
 <table>
 <tr>
 <td width="30%">
-<img src="https://via.placeholder.com/480x270/4A90E2/FFFFFF?text=ICMLA+2025" alt="ICMLA 2025" width="100%">
+<img src="images/1loradoc.png" alt="ICMLA 2025" width="100%">
 </td>
 <td width="70%">
 
