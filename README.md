@@ -95,7 +95,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="5lorapower.png" alt="ICCCN 2024" width="100%">
+<img src="images/5lorapower.png" alt="ICCCN 2024" width="100%">
 </td>
 <td width="70%">
 
@@ -109,7 +109,7 @@ Dongyi Ma, **Aitian Ma** *(co-first author)*, Sirui Luo, Martin de Jode, Andrew 
 
 <tr>
 <td width="30%">
-<img src="6para.png" alt="ICLR 2024" width="100%">
+<img src="images/6para.png" alt="ICLR 2024" width="100%">
 </td>
 <td width="70%">
 
@@ -123,7 +123,7 @@ Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Don
 
 <tr>
 <td width="30%">
-<img src="7autotcl.png" alt="AI4TS 2023" width="100%">
+<img src="images/7autotcl.png" alt="AI4TS 2023" width="100%">
 </td>
 <td width="70%">
 
@@ -141,7 +141,7 @@ Xu Zheng, Tianchun Wang, Wei Cheng, **Aitian Ma**, Haifeng Chen, Mo Sha, and Don
 <table>
 <tr>
 <td width="30%">
-<img src="1_j_teacherstudent.png" alt="IEEE ToN 2024" width="100%">
+<img src="images/1_j_teacherstudent.png" alt="IEEE ToN 2024" width="100%">
 </td>
 <td width="70%">
 
