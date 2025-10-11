@@ -24,7 +24,7 @@ If your group or organization is looking for someone with a strong background in
 ## 👋 About Me
 I am a **Ph.D. Candidate in Computer Science** at the **Knight Foundation School of Computing and Information Sciences (KFSCIS)**, **Florida International University (FIU)**, advised by **Dr. Mo Sha**, focusing on **reliable sensing, adaptive learning, and AIoT systems**.
 
-Before joining FIU, I earned my **M.S.** from **Beijing University of Technology** and my **B.S.** from **Henan Agricultural University**.  
+Before joining FIU, I earned my **M.S.** from **Beijing University of Technology**.  
 
 My research integrates **wireless networking**, **edge AI**, and **learning-based adaptation** to make **wireless sensing and communication systems more reliable, efficient, and intelligent**.
 
@@ -51,8 +51,6 @@ My research integrates **wireless networking**, **edge AI**, and **learning-base
   *Thesis:* The Research and Implementation of Finite Element Analysis Simulation System  
   *Advisor:* Ruihua Di  
 
-- **Henan Agricultural University**, Zhengzhou, China  
-  *B.S. in Computer Science* (Sept 2006 – June 2010)
 
 ---
 
