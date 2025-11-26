@@ -139,6 +139,41 @@
             padding-left: 10px;
         }
         
+        /* News Section */
+        .news-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .news-item {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .news-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .news-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
         /* Publication Cards */
         .pub-stats {
             display: flex;
@@ -220,6 +255,16 @@
             margin-bottom: 10px;
         }
         
+        .pub-title a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .pub-title a:hover {
+            color: #667eea;
+        }
+        
         .pub-authors {
             color: #5a6c7d;
             margin-bottom: 8px;
@@ -230,6 +275,28 @@
             color: #667eea;
             font-weight: 600;
             margin-bottom: 8px;
+        }
+        
+        .pub-links {
+            margin-top: 10px;
+        }
+        
+        .pub-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-right: 8px;
+            margin-top: 5px;
+            transition: all 0.3s;
+        }
+        
+        .pub-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
         }
         
         .acceptance-rate {
@@ -409,17 +476,14 @@
             }
         }
     </style>
-
-
 </head>
 <body>
-
-
 
 <!-- Sticky Navigation -->
 <div class="nav-wrapper">
     <nav>
         <a href="#about">About</a>
+        <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#awards">Awards</a>
         <a href="#experience">Experience</a>
@@ -477,7 +541,6 @@
     </div>
 </section>
 
-
 <!-- News Section -->
 <section id="news">
     <h2>📰 News</h2>
@@ -510,6 +573,57 @@
             <p>Best Paper Awards</p>
         </div>
     </div>
+    
+    <h3>🎓 Conference Papers</h3>
+    
+    <h4 style="color: #667eea; margin: 20px 0 10px 0;">📝 Under Review</h4>
+    
+    <table class="pub-table">
+        <thead>
+            <tr>
+                <th style="width: 20%;">Visual</th>
+                <th style="width: 80%;">Publication Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="color: #667eea; font-size: 2em;">🔬</strong>
+                    </div>
+                </td>
+                <td>
+                    <div class="pub-title">🔷 LLM-Based Noise-Aware Domain Adaptation Agent for Industrial Wireless Mesh Network Configuration</div>
+                    <div class="pub-authors"><strong>Aitian Ma</strong>, Mo Sha</div>
+                    <div class="pub-venue">📅 Under Review</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="color: #667eea; font-size: 2em;">🤖</strong>
+                    </div>
+                </td>
+                <td>
+                    <div class="pub-title">🔷 Zero-shot Industrial Wireless Mesh Network Configuration via Dual-Mind LLMs</div>
+                    <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Ali Maatouk (Yale), Rex Ying (Yale), Mo Sha</div>
+                    <div class="pub-venue">📅 Under Review</div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <img src="images/MixLinear.png" alt="Under Review" class="pub-image">
+                </td>
+                <td>
+                    <div class="pub-title">🔷 MixLinear: Extreme Low Resource Multivariate Time Series Forecasting with 0.1 K Parameters</div>
+                    <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</div>
+                    <div class="pub-venue">📅 Under Review</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     
     <h4 style="color: #667eea; margin: 30px 0 10px 0;">✅ Published</h4>
     
@@ -705,7 +819,6 @@
     </table>
 </section>
 
-
 <!-- Awards -->
 <section id="awards">
     <h2>🏆 Awards & Honors</h2>
@@ -726,10 +839,10 @@
                 <td><strong>2025</strong></td>
                 <td>🏆 Best Paper Award Nominee, <em>IEEE DCOSS-IoT</em></td>
             </tr>
-			<tr>
-		        <td><strong>2025</strong></td>
-		        <td>🎓 FIU UGS Travel Award for the Academy of Science, Engineering, and Medicine of Florida (ASEMFL) Annual Conference</td>
-    		</tr>
+            <tr>
+                <td><strong>2025</strong></td>
+                <td>🎓 FIU UGS Travel Award for the Academy of Science, Engineering, and Medicine of Florida (ASEMFL) Annual Conference</td>
+            </tr>
             <tr>
                 <td><strong>2023</strong></td>
                 <td>🏆 Best Paper Award, <em>AI4TS Workshop</em></td>
@@ -878,10 +991,9 @@
                     <span class="skill-tag">Resource-Efficient Learning</span>
                 </td>
             </tr>
-
-	<table>
-
-
+        </tbody>
+    </table>
+</section>
 
 <!-- Service -->
 <section id="service">
@@ -895,10 +1007,9 @@
             <span class="skill-tag">LCN '25</span>
             <span class="skill-tag">CIT '25</span>
             <span class="skill-tag">ICMLA '25</span>
-			<span class="skill-tag">ICASSP '26</span>
-		    <span class="skill-tag">SAC '26</span>
+            <span class="skill-tag">ICASSP '26</span>
+            <span class="skill-tag">SAC '26</span>
             <span class="skill-tag">ACDSA '26</span>
-
         </div>
     </div>
     
@@ -954,17 +1065,7 @@
     </table>
 </section>
 
-<a href="https://mapmyvisitors.com/web/1c07w"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=rgw6i8m36D2rRoR1e0MMjjXAjviZkdVjTg_eDE6Ebzw&cl=ffffff" /></a>
+<a href="https://mapmyvisitors.com/web/1c07w" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=rgw6i8m36D2rRoR1e0MMjjXAjviZkdVjTg_eDE6Ebzw&cl=ffffff" /></a>
 
-
-	</table>
-
-		</tbody>
-	</table>
-</section>
 </body>
 </html>
-
-
-
-
