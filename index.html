@@ -119,19 +119,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
   background: rgba(102, 126, 234, 0.12);
 }
 
-/* ---------- Shell ---------- */
-.page-shell { display: block; padding-top: 2.5rem; padding-bottom: 3rem; }
-.page-content { max-width: 860px; margin: 0 auto; min-width: 0; }
+/* ---------- Shell: sidebar + centred content ---------- */
+.page-shell {
+  display: grid;
+  /* Empty third column mirrors the sidebar so the content column sits centred. */
+  grid-template-columns: 190px minmax(0, 1fr) 190px;
+  gap: 2.6rem;
+  max-width: 1240px;
+  align-items: start;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.page-content { min-width: 0; }
 
 .section { padding: 2rem 0; }
 .section-divider { border-top: 1px solid var(--line-soft); }
 
 /* ---------- Sidebar ---------- */
 .intro-sidebar {
-  position: fixed;
-  top: 2rem;
-  left: max(1rem, calc(50vw - 700px));
-  width: 190px;
+  position: sticky;
+  top: calc(var(--nav-height) + 1.25rem);
 }
 
 .avatar-wrap {
@@ -332,26 +340,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .interest-list li { margin-bottom: 0.35rem; font-weight: 600; font-size: 0.97rem; }
 .interest-list li span { font-weight: 400; color: var(--text-soft); }
 
-.intro-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.4rem;
-  margin-top: 1.1rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--line-soft);
-}
-
-.intro-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 0.94rem;
-}
-
-.intro-links a:hover { color: var(--accent-hover); }
-
 /* ---------- Section headings ---------- */
 .section-heading {
   display: flex;
@@ -396,45 +384,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .prose { max-width: 74ch; color: var(--text-soft); font-size: 0.96rem; }
 .prose p { margin: 0 0 1rem; }
-
-/* ---------- News ---------- */
-.news-panel {
-  background: var(--surface);
-  border: 1px solid var(--line-card);
-  border-radius: var(--radius-md);
-  padding: 0.2rem 0;
-}
-
-.news-list { display: grid; gap: 0.2rem; max-height: 320px; overflow-y: auto; }
-
-.news-item {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 1.2rem;
-  align-items: start;
-  padding: 0.9rem 1.2rem;
-}
-
-.news-item + .news-item { border-top: 1px solid var(--line-soft); }
-
-.news-item time {
-  color: var(--accent);
-  font-weight: 800;
-  font-size: 0.88rem;
-  line-height: 1.55;
-}
-
-.news-item p {
-  margin: 0;
-  color: var(--text-soft);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 0.98rem;
-}
-
-.news-item p strong { color: var(--text); }
-
-.news-item .inline-links { margin-top: 0.2rem; display: flex; flex-wrap: wrap; gap: 0.9rem; font-family: "Manrope", sans-serif; font-size: 0.85rem; }
-.news-item .inline-links a { color: var(--accent); font-weight: 700; }
 
 /* ---------- Papers ---------- */
 .paper-list { display: grid; gap: 0.7rem; }
@@ -834,8 +783,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
+  .page-shell { grid-template-columns: 1fr; gap: 0; }
   .intro-sidebar {
     position: static;
+    top: auto;
     width: 100%;
     max-width: 860px;
     margin: 0 auto 2rem;
@@ -859,7 +810,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .paper-thumb { max-width: 100%; }
   .experience-entry { grid-template-columns: 1fr; gap: 0.7rem; }
   .experience-mark { width: 64px; height: 64px; font-size: 1.2rem; }
-  .news-item { grid-template-columns: 1fr; gap: 0.3rem; }
   .award-list li { grid-template-columns: 1fr; gap: 0.15rem; }
   .intro-side-links { grid-auto-flow: row; gap: 0.5rem; }
   .simple-table td:last-child { white-space: normal; }
@@ -876,7 +826,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
     </a>
     <nav class="site-nav" aria-label="Section navigation">
       <a href="#about">About</a>
-      <a href="#news">News</a>
       <a href="#selected">Selected Papers</a>
       <a href="#publications">Publications</a>
       <a href="#education">Education</a>
@@ -964,22 +913,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
         accurately with a fraction of the parameters, data, and energy that current models demand.
       </p>
 
-      <p class="intro-paragraph">
-        Two threads run through my work. The first is <em>extreme parameter efficiency</em> in forecasting &mdash;
-        <a href="#mixlinear">MixLinear</a> matches state-of-the-art long-term forecasters using
-        <strong>0.1K parameters</strong>, and <a href="#mmfnet">MMFNet</a> shows that multi-scale masking in the
-        frequency domain recovers accuracy that time-domain models leave on the table. The second is
-        <em>self-supervised representation learning</em> for time series, where
-        <a href="#parametric">Parametric Augmentation</a> and <a href="#autotcl">AutoTCL</a> replace hand-tuned
-        augmentation heuristics with augmentations the model learns for itself.
-      </p>
-
-      <p class="intro-paragraph">
-        Because I build these models to run on real hardware, my work also reaches into wireless sensing and
-        AIoT, where the constraints are not hypothetical: battery-powered nodes, noisy links, and no room for a
-        large model. Before FIU I earned my M.S. from Beijing University of Technology.
-      </p>
-
       <div class="interest-block">
         <p class="interest-title">Research Interests</p>
         <ul class="interest-list">
@@ -988,72 +921,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
           <li>Resource-Efficient &amp; Edge Deployment <span>&mdash; sub-kilobyte models, on-device inference, energy-aware training</span></li>
           <li>Time Series for AIoT <span>&mdash; sensing, domain adaptation, and reliable wireless systems</span></li>
         </ul>
-      </div>
-
-      <div class="intro-links">
-        <a href="#selected">Selected Papers</a>
-        <a href="https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-        <a href="https://github.com/aitianma" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="mailto:ama003@fiu.edu">ama003@fiu.edu</a>
-      </div>
-    </section>
-
-    <!-- ============ NEWS ============ -->
-    <section class="section section-divider" id="news">
-      <div class="section-heading">
-        <h2>News</h2>
-      </div>
-      <div class="news-panel">
-        <div class="news-list">
-
-          <article class="news-item">
-            <time datetime="2026-03">Mar 2026</time>
-            <div>
-              <p>Our paper <strong>&ldquo;Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning&rdquo;</strong> was accepted to <strong>DCOSS-IoT 2026</strong>.</p>
-              <div class="inline-links">
-                <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">Paper</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-item">
-            <time datetime="2026-01">Jan 2026</time>
-            <div>
-              <p><strong>MixLinear</strong> &mdash; multivariate time series forecasting with <strong>0.1K parameters</strong> &mdash; was accepted to <strong>ICLR 2026</strong>.</p>
-              <div class="inline-links">
-                <a href="https://arxiv.org/abs/2410.02081" target="_blank" rel="noreferrer">Paper</a>
-                <a href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer">Code</a>
-                <a href="https://recorder-v3.slideslive.com/#/share?share=108680&s=4eeab25b-f387-4749-88fd-562b4baea0e9" target="_blank" rel="noreferrer">Slides &amp; Video</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-item">
-            <time datetime="2025-11">Nov 2025</time>
-            <div>
-              <p><strong>MMFNet</strong> &mdash; multi-scale frequency masking for time series forecasting &mdash; was accepted to <strong>ACM SAC 2026</strong>.</p>
-              <div class="inline-links">
-                <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">Paper</a>
-                <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-item">
-            <time datetime="2025-06">Jun 2025</time>
-            <div>
-              <p><strong>&ldquo;Sensorless Air Temperature Sensing Using LoRa Link Characteristics&rdquo;</strong> received a <strong>Best Paper Award Nomination</strong> at IEEE DCOSS-IoT 2025.</p>
-            </div>
-          </article>
-
-          <article class="news-item">
-            <time datetime="2025-01">2025</time>
-            <div>
-              <p>Received the <strong>Young Gladiators Fellowship</strong> from Northeastern University.</p>
-            </div>
-          </article>
-
-        </div>
       </div>
     </section>
 
@@ -1093,6 +960,37 @@ button, a { -webkit-tap-highlight-color: transparent; }
                 <a href="https://arxiv.org/abs/2410.02081" target="_blank" rel="noreferrer">arXiv</a>
                 <a href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://recorder-v3.slideslive.com/#/share?share=108680&s=4eeab25b-f387-4749-88fd-562b4baea0e9" target="_blank" rel="noreferrer">Slides &amp; Video</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MMFNet -->
+        <article class="paper-item" id="mmfnet">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/MMFNet.png" alt="MMFNet multi-scale frequency masking overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">ACM SAC 2026</span>
+                  <span class="badge badge-secondary">Acceptance 25%</span>
+                  <a class="repo-badge" href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer" aria-label="GitHub stars for MMFNet">
+                    <img src="https://img.shields.io/github/stars/aitianma/MMFNet?style=flat&logo=github&logoColor=white&label=stars&labelColor=2c3e50&color=667eea" alt="GitHub stars for aitianma/MMFNet" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">MMFNet: Multi-Scale Frequency Masking Neural Network for Multivariate Time Series Forecasting</a></h3>
+              <p class="paper-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</p>
+              <p class="paper-summary">
+                Long-term forecasting fails in characteristic ways when fine-grained temporal structure is
+                averaged away. MMFNet captures patterns at multiple scales simultaneously and applies learnable
+                masking in the frequency domain to suppress the components that do not carry signal, improving
+                long-horizon accuracy over strong time-domain baselines.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">arXiv</a>
+                <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>
@@ -1144,37 +1042,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
               </p>
               <div class="link-row">
                 <a href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank" rel="noreferrer">Paper</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- MMFNet -->
-        <article class="paper-item" id="mmfnet">
-          <div class="paper-body">
-            <img class="paper-thumb" src="images/MMFNet.png" alt="MMFNet multi-scale frequency masking overview" data-lightbox />
-            <div class="paper-content">
-              <div class="paper-head">
-                <div class="paper-meta-line">
-                  <span class="badge">ACM SAC 2026</span>
-                  <span class="badge badge-secondary">Acceptance 25%</span>
-                  <a class="repo-badge" href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer" aria-label="GitHub stars for MMFNet">
-                    <img src="https://img.shields.io/github/stars/aitianma/MMFNet?style=flat&logo=github&logoColor=white&label=stars&labelColor=2c3e50&color=667eea" alt="GitHub stars for aitianma/MMFNet" loading="lazy" />
-                  </a>
-                </div>
-              </div>
-              <h3><a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">MMFNet: Multi-Scale Frequency Masking Neural Network for Multivariate Time Series Forecasting</a></h3>
-              <p class="paper-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</p>
-              <p class="paper-summary">
-                Long-term forecasting fails in characteristic ways when fine-grained temporal structure is
-                averaged away. MMFNet captures patterns at multiple scales simultaneously and applies learnable
-                masking in the frequency domain to suppress the components that do not carry signal, improving
-                long-horizon accuracy over strong time-domain baselines.
-              </p>
-              <div class="link-row">
-                <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">Paper</a>
-                <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">arXiv</a>
-                <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </div>
           </div>
