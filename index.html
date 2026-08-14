@@ -1,1220 +1,1579 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aitian Ma - Academic Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            background: #ffffff;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Sticky Navigation */
-        .nav-wrapper {
-            position: sticky;
-            top: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 15px;
-            gap: 10px;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 20px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            background: rgba(255,255,255,0.1);
-        }
-        
-        nav a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-        
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
-            margin-bottom: 40px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        .header h3 {
-            color: #5a6c7d;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-        
-        .job-market {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            margin-top: 15px;
-            font-weight: 600;
-        }
-        
-        .badges {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .badge {
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-        
-        .badge:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Sections */
-        section {
-            margin-bottom: 50px;
-            scroll-margin-top: 80px;
-        }
-        
-        h2 {
-            font-size: 2em;
-            color: #2c3e50;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .blockquote {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin: 20px 0;
-            font-style: italic;
-            color: #5a6c7d;
-        }
-        
-        .research-interests {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        .research-interests div {
-            margin: 8px 0;
-            padding-left: 10px;
-        }
-        
-        /* News Section */
-        .news-container {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .news-item {
-            background: white;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .news-date {
-            color: #667eea;
-            font-weight: 600;
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
-        
-        .news-tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-right: 8px;
-        }
-        
-        /* Publication Cards */
-        .pub-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-        
-        .stat-card h3 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-        
-        .pub-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 20px 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .pub-table thead {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .pub-table th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .pub-table td {
-            padding: 20px;
-            vertical-align: top;
-            border-bottom: 1px solid #e1e4e8;
-        }
-        
-        .pub-table tbody tr {
-            background: white;
-            transition: background 0.3s;
-        }
-        
-        .pub-table tbody tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        
-        .pub-table tbody tr:hover {
-            background: #e8eaf6;
-        }
-        
-        .pub-image {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .pub-image:hover {
-            transform: scale(1.05);
-        }
-        
-        .pub-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .pub-title a {
-            color: #2c3e50;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .pub-title a:hover {
-            color: #667eea;
-        }
-        
-        .pub-authors {
-            color: #5a6c7d;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
-        
-        .pub-venue {
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .pub-links {
-            margin-top: 10px;
-        }
-        
-        .pub-link {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            text-decoration: none;
-            font-size: 0.9em;
-            margin-right: 8px;
-            margin-top: 5px;
-            transition: all 0.3s;
-        }
-        
-        .pub-link:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-        }
-        
-        .acceptance-rate {
-            display: inline-block;
-            background: #e8eaf6;
-            color: #667eea;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-        
-        .award-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-        
-        /* Skills Table */
-        .skills-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .skills-table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            text-align: left;
-        }
-        
-        .skills-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e1e4e8;
-        }
-        
-        .skills-table tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        
-        .skill-tag {
-            display: inline-block;
-            background: #e8eaf6;
-            color: #667eea;
-            padding: 4px 10px;
-            border-radius: 12px;
-            margin: 3px;
-            font-size: 0.9em;
-        }
-        
-        /* Awards Table */
-        .awards-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .awards-table thead {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .awards-table th {
-            padding: 15px;
-            text-align: left;
-        }
-        
-        .awards-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e1e4e8;
-        }
-        
-        .awards-table tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        
-        /* Experience */
-        .exp-card {
-            background: white;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .exp-card:hover {
-            transform: translateX(5px);
-        }
-        
-        .exp-date {
-            color: #667eea;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
-        
-        .exp-title {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 5px 0;
-        }
-        
-        .exp-org {
-            color: #5a6c7d;
-            font-style: italic;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px;
-            margin-top: 50px;
-        }
-        
-        .footer h2 {
-            color: white;
-            border: none;
-        }
-        
-        .footer-badges {
-            margin-top: 20px;
-        }
-        
-        /* Collapsible */
-        details {
-            margin: 20px 0;
-        }
-        
-        summary {
-            cursor: pointer;
-            font-weight: 600;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            user-select: none;
-        }
-        
-        summary:hover {
-            background: #e8eaf6;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .pub-stats {
-                flex-direction: column;
-            }
-            
-            .pub-table, .skills-table, .awards-table {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aitian Ma | Academic Homepage</title>
+<meta name="description" content="Academic homepage of Aitian Ma, Ph.D. candidate in Computer Science at Florida International University, working on efficient time series forecasting and representation learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f8f9fa;
+  --text: #2c3e50;
+  --text-soft: #5a6c7d;
+  --line: #e1e4e8;
+  --line-soft: rgba(102, 126, 234, 0.16);
+  --line-card: rgba(102, 126, 234, 0.30);
+  /* Signature indigo -> purple, carried over from the original site */
+  --brand: #667eea;
+  --brand-2: #764ba2;
+  --brand-grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --accent: #5b5fd0;
+  --accent-hover: #4a3fb0;
+  --accent-soft: #eef0fc;
+  --gold: #8a6413;
+  --gold-soft: #fdf3e0;
+  --red: #c0392b;
+  --shadow: 0 16px 40px rgba(102, 126, 234, 0.18);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --nav-height: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 18px);
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.container { width: min(calc(100% - 2rem), 1320px); margin: 0 auto; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.nav-shell {
+  min-height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-grad);
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.2rem;
+}
+
+.site-nav a {
+  color: var(--text-soft);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: var(--accent);
+  background: rgba(102, 126, 234, 0.12);
+}
+
+/* ---------- Shell ---------- */
+.page-shell { display: block; padding-top: 2.5rem; padding-bottom: 3rem; }
+.page-content { max-width: 860px; margin: 0 auto; min-width: 0; }
+
+.section { padding: 2rem 0; }
+.section-divider { border-top: 1px solid var(--line-soft); }
+
+/* ---------- Sidebar ---------- */
+.intro-sidebar {
+  position: fixed;
+  top: 2rem;
+  left: max(1rem, calc(50vw - 700px));
+  width: 190px;
+}
+
+.avatar-wrap {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.intro-avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--line-soft);
+  background: var(--surface);
+}
+
+.avatar-fallback {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--brand-grad);
+  color: #fff;
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border: 5px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--line-soft);
+}
+
+.intro-name {
+  margin: 1rem 0 0;
+  font-size: 1.42rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.intro-name span { display: block; font-size: 0.95rem; color: var(--text-soft); font-weight: 600; margin-top: 0.2rem; letter-spacing: 0; }
+
+.intro-role, .intro-affiliation, .intro-location {
+  margin: 0.55rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.intro-affiliation { margin-top: 0.26rem; }
+
+.intro-stats {
+  margin: 0.8rem 0 0;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.intro-stats div { display: grid; gap: 0.15rem; }
+
+.intro-stats dt {
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.intro-stats dd { margin: 0; font-weight: 700; font-size: 0.9rem; line-height: 1.35; }
+
+.intro-side-links { display: grid; gap: 0.5rem; margin-top: 0.75rem; }
+
+.intro-side-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.intro-side-links a:hover { color: var(--accent-hover); }
+
+.icon {
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.icon svg { width: 1.1rem; height: 1.1rem; display: block; }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: 0; }
+
+.eyebrow, .section-kicker {
+  margin: 0 0 0.7rem;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.hero h1, .section-heading h2, .paper-content h3, .experience-content h3 {
+  font-family: "Crimson Text", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+  line-height: 1.02;
+}
+
+.hero h1 small {
+  display: block;
+  font-size: 0.4em;
+  color: var(--text-soft);
+  letter-spacing: 0;
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+.job-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.job-pill::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.intro-lead, .intro-paragraph, .prose {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.intro-lead {
+  margin: 0 0 0.7rem;
+  font-size: 1.06rem;
+  line-height: 1.62;
+  color: var(--text);
+  max-width: 54rem;
+}
+
+.intro-paragraph {
+  margin: 0 0 0.7rem;
+  font-size: 0.99rem;
+  line-height: 1.68;
+  color: var(--text-soft);
+  max-width: 54rem;
+}
+
+.intro-lead a, .intro-paragraph a, .prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+.intro-lead a:hover, .intro-paragraph a:hover, .prose a:hover { color: var(--accent-hover); }
+
+.interest-block { margin-top: 0.9rem; }
+
+.interest-title {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.98rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.interest-list {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--text);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.interest-list li { margin-bottom: 0.35rem; font-weight: 600; font-size: 0.97rem; }
+.interest-list li span { font-weight: 400; color: var(--text-soft); }
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.4rem;
+  margin-top: 1.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.intro-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.intro-links a:hover { color: var(--accent-hover); }
+
+/* ---------- Section headings ---------- */
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  line-height: 1.08;
+}
+
+.section-heading .heading-note {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: var(--brand-grad);
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 0.7rem;
+  border-radius: 999px;
+  background: var(--brand-grad);
+}
+
+.prose { max-width: 74ch; color: var(--text-soft); font-size: 0.96rem; }
+.prose p { margin: 0 0 1rem; }
+
+/* ---------- News ---------- */
+.news-panel {
+  background: var(--surface);
+  border: 1px solid var(--line-card);
+  border-radius: var(--radius-md);
+  padding: 0.2rem 0;
+}
+
+.news-list { display: grid; gap: 0.2rem; max-height: 320px; overflow-y: auto; }
+
+.news-item {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  padding: 0.9rem 1.2rem;
+}
+
+.news-item + .news-item { border-top: 1px solid var(--line-soft); }
+
+.news-item time {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.news-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.98rem;
+}
+
+.news-item p strong { color: var(--text); }
+
+.news-item .inline-links { margin-top: 0.2rem; display: flex; flex-wrap: wrap; gap: 0.9rem; font-family: "Manrope", sans-serif; font-size: 0.85rem; }
+.news-item .inline-links a { color: var(--accent); font-weight: 700; }
+
+/* ---------- Papers ---------- */
+.paper-list { display: grid; gap: 0.7rem; }
+
+.paper-item {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--line-card);
+  border-radius: var(--radius-md);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.paper-item:hover, .paper-item:focus-within {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(102, 126, 234, 0.34);
+}
+
+.paper-body {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.paper-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid var(--line-card);
+  background: #fff;
+  cursor: zoom-in;
+  padding: 4px;
+}
+
+.paper-content { min-width: 0; }
+
+.paper-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.paper-meta-line { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.badge-secondary { background: rgba(102, 126, 234, 0.10); color: var(--text-soft); }
+
+.repo-badge { display: inline-flex; align-items: center; flex-shrink: 0; }
+.repo-badge img { display: block; height: 20px; width: auto; }
+.badge-award { background: var(--gold-soft); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.45); }
+.badge-review { background: #fdeee9; color: #a4441f; }
+
+.paper-content h3 { margin: 0 0 0.45rem; font-size: 1.3rem; line-height: 1.2; }
+.paper-content h3 a:hover { color: var(--accent); }
+
+.paper-authors {
+  margin: 0 0 0.4rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.paper-authors strong { color: var(--text); }
+
+.paper-summary {
+  margin: 0;
+  color: var(--text-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95rem;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.link-row a { color: var(--accent); font-weight: 700; position: relative; }
+
+.link-row a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0.2);
+  transform-origin: left center;
+  opacity: 0;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.link-row a:hover::after, .link-row a:focus-visible::after { opacity: 1; transform: scaleX(1); }
+
+/* ---------- Compact publication list ---------- */
+.pub-group { margin-top: 1.4rem; }
+
+.pub-group > h3 {
+  margin: 0 0 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-soft);
+}
+
+.pub-list { display: grid; gap: 0.15rem; list-style: none; margin: 0; padding: 0; }
+
+.pub-list li { padding: 0.85rem 0; }
+.pub-list li + li { border-top: 1px solid var(--line-soft); }
+
+.pub-list .pub-title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+}
+
+.pub-list .pub-title a:hover { color: var(--accent); }
+
+.pub-list .pub-authors {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+}
+
+.pub-list .pub-authors strong { color: var(--text); }
+
+.pub-list .pub-venue {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 0.93rem;
+}
+
+.pub-list .pub-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; align-items: center; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  background: rgba(102, 126, 234, 0.10);
+  color: var(--text-soft);
+}
+
+.tag-award { background: var(--gold-soft); color: var(--gold); }
+.tag-review { background: #fdeee9; color: #a4441f; }
+.tag-link { background: var(--accent-soft); color: var(--accent); }
+.tag-link:hover { background: var(--accent); color: #fff; }
+
+.footnote { font-size: 0.85rem; color: var(--text-soft); font-style: italic; }
+
+/* ---------- Publications disclosure ---------- */
+.pub-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.62rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-card);
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.93rem;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.pub-toggle > summary::-webkit-details-marker { display: none; }
+.pub-toggle > summary::marker { content: ""; }
+
+.pub-toggle > summary:hover, .pub-toggle > summary:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.pub-toggle > summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.pub-toggle[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
+
+.pub-toggle .lbl-less { display: none; }
+.pub-toggle[open] .lbl-more { display: none; }
+.pub-toggle[open] .lbl-less { display: inline; }
+
+.pub-toggle .pub-reveal { animation: reveal 240ms ease; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ---------- Experience / Education ---------- */
+.experience-list { display: grid; gap: 1.15rem; }
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: 152px minmax(0, 1fr);
+  gap: 1.7rem;
+  align-items: start;
+}
+
+.experience-logo {
+  width: 100%;
+  max-width: 152px;
+  max-height: 76px;
+  object-fit: contain;
+  object-position: left center;
+  margin-top: 0.2rem;
+}
+
+.experience-logo-square { max-height: 92px; }
+
+.experience-mark {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line-card);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  font-family: "Crimson Text", Georgia, serif;
+}
+
+.experience-content h3 { margin: 0; font-size: 1.24rem; line-height: 1.2; }
+
+.experience-org { margin: 0.15rem 0 0; font-weight: 700; color: var(--text); font-size: 0.95rem; }
+
+.experience-date { margin: 0.1rem 0 0; color: var(--accent); font-weight: 800; font-size: 0.85rem; }
+
+.experience-desc {
+  margin: 0.3rem 0 0;
+  color: var(--text-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95rem;
+}
+
+/* ---------- Awards ---------- */
+.award-list { display: grid; gap: 0.15rem; list-style: none; margin: 0; padding: 0; }
+.award-list li { display: grid; grid-template-columns: 76px 1fr; gap: 1.2rem; padding: 0.8rem 0; align-items: baseline; }
+.award-list li + li { border-top: 1px solid var(--line-soft); }
+.award-list .year { color: var(--accent); font-weight: 800; font-size: 0.9rem; }
+.award-list .what { font-family: "Times New Roman", Times, serif; font-size: 0.99rem; }
+.award-list .what strong { font-family: "Manrope", sans-serif; font-size: 0.95rem; }
+.award-list .what em { color: var(--text-soft); }
+
+/* ---------- Teaching table ---------- */
+.simple-table { width: 100%; border-collapse: collapse; }
+.simple-table th {
+  text-align: left;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-soft);
+  padding: 0 0 0.55rem;
+  border-bottom: 1px solid var(--line-soft);
+  font-weight: 800;
+}
+.simple-table td { padding: 0.7rem 0; border-bottom: 1px solid var(--line-soft); font-size: 0.95rem; }
+.simple-table td:first-child { font-weight: 800; color: var(--accent); width: 20%; }
+.simple-table td:last-child { text-align: right; color: var(--text-soft); font-weight: 600; white-space: nowrap; }
+
+/* ---------- Chips ---------- */
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.75rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line-card);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.sub-label {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-soft);
+}
+
+.sub-label:first-child { margin-top: 0; }
+
+/* ---------- Contact ---------- */
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--line-card);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.5rem;
+}
+
+.contact-links { display: flex; flex-wrap: wrap; gap: 0.9rem 1.6rem; margin-top: 0.9rem; }
+.contact-links a { color: var(--accent); font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+.contact-links a:hover { color: var(--accent-hover); }
+
+.site-footer {
+  padding: 2rem 0 1rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-meta { display: grid; gap: 0.35rem; }
+
+.visitor-map { flex-shrink: 0; }
+
+.visitor-map img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line-card);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(10, 16, 24, 0.82);
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-image {
+  max-width: min(1200px, 92vw);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  .intro-sidebar {
+    position: static;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .intro-sidebar .sidebar-body { min-width: 0; }
+  .intro-stats { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .intro-side-links { grid-auto-flow: column; grid-auto-columns: max-content; gap: 1.2rem; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 14.5px; }
+  .site-nav { display: none; }
+  .intro-sidebar { grid-template-columns: 1fr; justify-items: start; }
+  .paper-body { grid-template-columns: 1fr; }
+  .paper-thumb { max-width: 100%; }
+  .experience-entry { grid-template-columns: 1fr; gap: 0.7rem; }
+  .experience-mark { width: 64px; height: 64px; font-size: 1.2rem; }
+  .news-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  .award-list li { grid-template-columns: 1fr; gap: 0.15rem; }
+  .intro-side-links { grid-auto-flow: row; gap: 0.5rem; }
+  .simple-table td:last-child { white-space: normal; }
+}
+</style>
 </head>
 <body>
 
-<!-- Sticky Navigation -->
-<div class="nav-wrapper">
-    <nav>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
-        <a href="#experience">Experience</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#skills">Skills</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="#top">
+      <span class="brand-mark">AM</span>
+      <span>Aitian Ma</span>
+    </a>
+    <nav class="site-nav" aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#selected">Selected Papers</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#awards">Awards</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </div>
+</header>
+
+<main class="page-shell container" id="top">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="intro-sidebar" aria-label="Profile summary">
+    <div class="avatar-wrap">
+      <img class="intro-avatar" src="images/avatar.jpg" alt="Portrait of Aitian Ma"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+      <div class="avatar-fallback" style="display:none;" aria-hidden="true">AM</div>
+    </div>
+
+    <div class="sidebar-body">
+      <h2 class="intro-name">Aitian Ma<span>马艾田</span></h2>
+      <p class="intro-role">Ph.D. Candidate in Computer Science</p>
+      <p class="intro-affiliation">Knight Foundation School of Computing and Information Sciences,<br />Florida International University</p>
+      <p class="intro-location">Miami, FL, USA</p>
+
+      <dl class="intro-stats">
+        <div>
+          <dt>Research Focus</dt>
+          <dd>Time Series Modeling</dd>
+        </div>
+        <div>
+          <dt>Expected Graduation</dt>
+          <dd>December 2026</dd>
+        </div>
+        <div>
+          <dt>Highlights</dt>
+          <dd>ICLR &middot; TOSN &middot; IEEE/ACM ToN</dd>
+        </div>
+        <div>
+          <dt>Best Paper Honors</dt>
+          <dd>1 Award &middot; 1 Nominee</dd>
+        </div>
+      </dl>
+
+      <div class="intro-side-links">
+        <a href="mailto:ama003@fiu.edu">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.75h18v10.5H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4.5 8 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>Email</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en" target="_blank" rel="noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 2 9.2 12 14l8-3.84V17h2V9.2L12 4Z" fill="currentColor"/><path d="M6 13.2V16c0 1.86 2.69 3.38 6 3.38s6-1.52 6-3.38v-2.8l-6 2.88-6-2.88Z" fill="currentColor"/></svg></span>
+          <span>Google Scholar</span>
+        </a>
+        <a href="https://github.com/aitianma" target="_blank" rel="noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.75a9.25 9.25 0 0 0-2.92 18.03c.46.08.62-.2.62-.44v-1.7c-2.53.55-3.06-1.08-3.06-1.08-.41-1.05-1.01-1.33-1.01-1.33-.82-.56.06-.55.06-.55.91.07 1.39.94 1.39.94.81 1.39 2.13.99 2.65.76.08-.59.32-.99.57-1.22-2.02-.23-4.14-1.01-4.14-4.49 0-.99.35-1.8.94-2.44-.09-.23-.41-1.17.09-2.43 0 0 .77-.25 2.52.93a8.7 8.7 0 0 1 4.58 0c1.74-1.18 2.51-.93 2.51-.93.5 1.26.19 2.2.1 2.43.58.64.93 1.45.93 2.44 0 3.49-2.12 4.26-4.15 4.49.33.28.61.83.61 1.68v2.49c0 .24.16.52.63.43A9.25 9.25 0 0 0 12 2.75Z" fill="currentColor"/></svg></span>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/aitian-ma-4267404a/" target="_blank" rel="noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9.5h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.76v5.69h-4v-5.05c0-1.2-.02-2.75-1.75-2.75-1.76 0-2.03 1.31-2.03 2.66v5.14h-4v-11Z" fill="currentColor"/></svg></span>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="page-content">
+
+    <!-- ============ HERO / ABOUT ============ -->
+    <section class="section hero" id="about">
+      <p class="eyebrow">Time Series &middot; Efficient Deep Learning</p>
+      <h1>
+        Aitian Ma
+        <small>Building small, fast, and reliable models for time series.</small>
+      </h1>
+
+      <span class="job-pill">On the academic &amp; industry job market, 2026&ndash;2027</span>
+
+      <p class="intro-lead">
+        I am a Ph.D. candidate in Computer Science at <strong>Florida International University</strong>,
+        advised by <a href="https://users.cs.fiu.edu/~msha/" target="_blank" rel="noreferrer">Dr. Mo Sha</a>
+        and co-advised on AI research by <a href="https://users.cs.fiu.edu/~dluo/" target="_blank" rel="noreferrer">Dr. Dongsheng Luo</a>.
+        My research is on <strong>time series modeling</strong>: how to forecast and represent temporal data
+        accurately with a fraction of the parameters, data, and energy that current models demand.
+      </p>
+
+      <p class="intro-paragraph">
+        Two threads run through my work. The first is <em>extreme parameter efficiency</em> in forecasting &mdash;
+        <a href="#mixlinear">MixLinear</a> matches state-of-the-art long-term forecasters using
+        <strong>0.1K parameters</strong>, and <a href="#mmfnet">MMFNet</a> shows that multi-scale masking in the
+        frequency domain recovers accuracy that time-domain models leave on the table. The second is
+        <em>self-supervised representation learning</em> for time series, where
+        <a href="#parametric">Parametric Augmentation</a> and <a href="#autotcl">AutoTCL</a> replace hand-tuned
+        augmentation heuristics with augmentations the model learns for itself.
+      </p>
+
+      <p class="intro-paragraph">
+        Because I build these models to run on real hardware, my work also reaches into wireless sensing and
+        AIoT, where the constraints are not hypothetical: battery-powered nodes, noisy links, and no room for a
+        large model. Before FIU I earned my M.S. from Beijing University of Technology.
+      </p>
+
+      <div class="interest-block">
+        <p class="interest-title">Research Interests</p>
+        <ul class="interest-list">
+          <li>Time Series Forecasting <span>&mdash; lightweight architectures, frequency-domain modeling, long-horizon accuracy</span></li>
+          <li>Time Series Representation Learning <span>&mdash; contrastive learning, learnable and adaptive augmentation</span></li>
+          <li>Resource-Efficient &amp; Edge Deployment <span>&mdash; sub-kilobyte models, on-device inference, energy-aware training</span></li>
+          <li>Time Series for AIoT <span>&mdash; sensing, domain adaptation, and reliable wireless systems</span></li>
+        </ul>
+      </div>
+
+      <div class="intro-links">
+        <a href="#selected">Selected Papers</a>
+        <a href="https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a href="https://github.com/aitianma" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:ama003@fiu.edu">ama003@fiu.edu</a>
+      </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="section section-divider" id="news">
+      <div class="section-heading">
+        <h2>News</h2>
+      </div>
+      <div class="news-panel">
+        <div class="news-list">
+
+          <article class="news-item">
+            <time datetime="2026-03">Mar 2026</time>
+            <div>
+              <p>Our paper <strong>&ldquo;Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning&rdquo;</strong> was accepted to <strong>DCOSS-IoT 2026</strong>.</p>
+              <div class="inline-links">
+                <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2026-01">Jan 2026</time>
+            <div>
+              <p><strong>MixLinear</strong> &mdash; multivariate time series forecasting with <strong>0.1K parameters</strong> &mdash; was accepted to <strong>ICLR 2026</strong>.</p>
+              <div class="inline-links">
+                <a href="https://arxiv.org/abs/2410.02081" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer">Code</a>
+                <a href="https://recorder-v3.slideslive.com/#/share?share=108680&s=4eeab25b-f387-4749-88fd-562b4baea0e9" target="_blank" rel="noreferrer">Slides &amp; Video</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2025-11">Nov 2025</time>
+            <div>
+              <p><strong>MMFNet</strong> &mdash; multi-scale frequency masking for time series forecasting &mdash; was accepted to <strong>ACM SAC 2026</strong>.</p>
+              <div class="inline-links">
+                <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2025-06">Jun 2025</time>
+            <div>
+              <p><strong>&ldquo;Sensorless Air Temperature Sensing Using LoRa Link Characteristics&rdquo;</strong> received a <strong>Best Paper Award Nomination</strong> at IEEE DCOSS-IoT 2025.</p>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2025-01">2025</time>
+            <div>
+              <p>Received the <strong>Young Gladiators Fellowship</strong> from Northeastern University.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED PAPERS ============ -->
+    <section class="section section-divider" id="selected">
+      <div class="section-heading">
+        <h2>Selected Papers</h2>
+        <span class="heading-note">Time series work</span>
+      </div>
+
+      <div class="paper-list">
+
+        <!-- MixLinear -->
+        <article class="paper-item" id="mixlinear">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/MixLinear.png" alt="MixLinear architecture overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">ICLR 2026</span>
+                  <span class="badge badge-secondary">0.1K Parameters</span>
+                  <a class="repo-badge" href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer" aria-label="GitHub stars for MixLinear">
+                    <img src="https://img.shields.io/github/stars/aitianma/MixLinear?style=flat&logo=github&logoColor=white&label=stars&labelColor=2c3e50&color=667eea" alt="GitHub stars for aitianma/MixLinear" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/iclr26.pdf" target="_blank" rel="noreferrer">MixLinear: Extreme Low-Resource Multivariate Time Series Forecasting with 0.1K Parameters</a></h3>
+              <p class="paper-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</p>
+              <p class="paper-summary">
+                Long-term forecasting models keep growing while the devices that need them keep shrinking.
+                MixLinear models temporal dependencies in the time domain and inter-variate correlations in the
+                frequency domain, compressing the parameter budget to <strong>0.1K</strong> &mdash; orders of
+                magnitude smaller than comparable forecasters &mdash; while matching their accuracy.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/iclr26.pdf" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://arxiv.org/abs/2410.02081" target="_blank" rel="noreferrer">arXiv</a>
+                <a href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://recorder-v3.slideslive.com/#/share?share=108680&s=4eeab25b-f387-4749-88fd-562b4baea0e9" target="_blank" rel="noreferrer">Slides &amp; Video</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Parametric Augmentation -->
+        <article class="paper-item" id="parametric">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/6para.png" alt="Parametric augmentation framework overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">ICLR 2024</span>
+                  <span class="badge badge-secondary">Contrastive Learning</span>
+                </div>
+              </div>
+              <h3><a href="https://openreview.net/forum?id=EIPLdFy3vp" target="_blank" rel="noreferrer">Parametric Augmentation for Time Series Contrastive Learning</a></h3>
+              <p class="paper-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</p>
+              <p class="paper-summary">
+                Contrastive learning for time series lives or dies on its augmentations, which are usually picked
+                by hand and by dataset. We analyze what makes a good time series augmentation through an
+                information-theoretic lens and learn the augmentation parameters directly, producing
+                representations that transfer across forecasting and classification benchmarks.
+              </p>
+              <div class="link-row">
+                <a href="https://openreview.net/forum?id=EIPLdFy3vp" target="_blank" rel="noreferrer">OpenReview</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- AutoTCL -->
+        <article class="paper-item" id="autotcl">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/7autotcl.png" alt="AutoTCL adaptive augmentation overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">AI4TS 2023</span>
+                  <span class="badge badge-award">Best Paper Award</span>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank" rel="noreferrer">AutoTCL: Automated Time Series Contrastive Learning with Adaptive Augmentations</a></h3>
+              <p class="paper-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</p>
+              <p class="paper-summary">
+                AutoTCL removes the augmentation search from the practitioner's hands entirely: the augmentation
+                policy is learned jointly with the encoder and adapts per dataset, so a single pipeline works
+                across heterogeneous time series without per-domain tuning.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MMFNet -->
+        <article class="paper-item" id="mmfnet">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/MMFNet.png" alt="MMFNet multi-scale frequency masking overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">ACM SAC 2026</span>
+                  <span class="badge badge-secondary">Acceptance 25%</span>
+                  <a class="repo-badge" href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer" aria-label="GitHub stars for MMFNet">
+                    <img src="https://img.shields.io/github/stars/aitianma/MMFNet?style=flat&logo=github&logoColor=white&label=stars&labelColor=2c3e50&color=667eea" alt="GitHub stars for aitianma/MMFNet" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">MMFNet: Multi-Scale Frequency Masking Neural Network for Multivariate Time Series Forecasting</a></h3>
+              <p class="paper-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</p>
+              <p class="paper-summary">
+                Long-term forecasting fails in characteristic ways when fine-grained temporal structure is
+                averaged away. MMFNet captures patterns at multiple scales simultaneously and applies learnable
+                masking in the frequency domain to suppress the components that do not carry signal, improving
+                long-horizon accuracy over strong time-domain baselines.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">arXiv</a>
+                <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ FULL PUBLICATIONS ============ -->
+    <section class="section section-divider" id="publications">
+      <div class="section-heading">
+        <h2>Full Publication List</h2>
+        <span class="heading-note">* equal contribution</span>
+      </div>
+
+      <details class="pub-toggle">
+        <summary>
+          <span class="lbl-more">Show all 14 publications</span>
+          <span class="lbl-less">Hide full list</span>
+        </summary>
+        <div class="pub-reveal">
+
+      <div class="pub-group">
+        <h3>Journal Articles</h3>
+        <ul class="pub-list">
+          <li>
+            <div class="pub-title">Configuring Industrial Wireless Mesh Networks via Multi-Source Domain Adaptation and Feature Masking</div>
+            <div class="pub-authors">Xia Cheng*, <strong>Aitian Ma*</strong>, Dong Chen, Mo Sha</div>
+            <div class="pub-venue">ACM Transactions on Sensor Networks (TOSN), accepted June 2026</div>
+            <div class="pub-tags"><span class="tag">Accepted</span></div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10328686" target="_blank" rel="noreferrer">Adapting Wireless Network Configuration from Simulation to Reality via Deep Learning based Domain Adaptation</a></div>
+            <div class="pub-authors">Junyang Shi, <strong>Aitian Ma</strong>, Xia Cheng, Mo Sha, Xi Peng</div>
+            <div class="pub-venue">IEEE/ACM Transactions on Networking, vol. 32, no. 3, pp. 1983&ndash;1998, June 2024</div>
+            <div class="pub-tags"><a class="tag tag-link" href="https://ieeexplore.ieee.org/document/10328686" target="_blank" rel="noreferrer">IEEE Xplore</a></div>
+          </li>
+          <li>
+            <div class="pub-title">Sensorless Air Temperature Sensing Using LoRa Link Characteristics</div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha, Dongsheng Luo</div>
+            <div class="pub-venue">ACM Transactions on Sensor Networks (TOSN), under review</div>
+            <div class="pub-tags">
+              <span class="tag tag-review">Major Revision</span>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/dcoss2025.pdf" target="_blank" rel="noreferrer">Conference Preprint</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3>Conference &amp; Workshop Papers</h3>
+        <ul class="pub-list">
+          <li>
+            <div class="pub-title"><a href="https://users.cs.fiu.edu/~msha/publications/iclr26.pdf" target="_blank" rel="noreferrer">MixLinear: Extreme Low-Resource Multivariate Time Series Forecasting with 0.1K Parameters</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</div>
+            <div class="pub-venue">International Conference on Learning Representations (ICLR), 2026</div>
+            <div class="pub-tags">
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/iclr26.pdf" target="_blank" rel="noreferrer">Paper</a>
+              <a class="tag tag-link" href="https://github.com/aitianma/MixLinear" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">MMFNet: Multi-Scale Frequency Masking Neural Network for Multivariate Time Series Forecasting</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</div>
+            <div class="pub-venue">41st ACM/SIGAPP Symposium on Applied Computing (SAC&rsquo;26)</div>
+            <div class="pub-tags">
+              <span class="tag">Acceptance 26/104 = 25%</span>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">Paper</a>
+              <a class="tag tag-link" href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Ali Maatouk (Yale), Rex Ying (Yale), Mo Sha</div>
+            <div class="pub-venue">22nd International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT), 2026</div>
+            <div class="pub-tags"><a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">Paper</a></div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" target="_blank" rel="noreferrer">LLM-Driven Diagnosis and Adaptive Policy Optimization for Reducing Packet Error Rate in LoRaWAN Networks</a></div>
+            <div class="pub-authors">Dongyi Ma (UCL), <strong>Aitian Ma*</strong>, Sirui Luo (UCL), Martin de Jode (UCL), Andrew Hudson-Smith (UCL), Mo Sha</div>
+            <div class="pub-venue">IEEE ICMLA, Special Session on Deep Learning and Applications, December 2025</div>
+            <div class="pub-tags">
+              <span class="tag">Acceptance 15/90 = 16.6%</span>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/11096212" target="_blank" rel="noreferrer">Sensorless Air Temperature Sensing Using LoRa Link Characteristics</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha, Dongsheng Luo</div>
+            <div class="pub-venue">IEEE DCOSS-IoT, June 2025</div>
+            <div class="pub-tags">
+              <span class="tag tag-award">Best Paper Award Nominee</span>
+              <span class="tag">Acceptance 26/110 = 23.6%</span>
+              <a class="tag tag-link" href="https://ieeexplore.ieee.org/document/11096212" target="_blank" rel="noreferrer">IEEE Xplore</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/11107002" target="_blank" rel="noreferrer">A LoRa-Based Energy-Harvesting Sensing System for Living Environment</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha</div>
+            <div class="pub-venue">IEEE MetroLivEnv, June 2025</div>
+            <div class="pub-tags">
+              <a class="tag tag-link" href="https://ieeexplore.ieee.org/document/11107002" target="_blank" rel="noreferrer">IEEE Xplore</a>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/MetroLivEnv25.pdf" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3672608.3707804" target="_blank" rel="noreferrer">WMN-CDA: Contrastive Domain Adaptation for Wireless Mesh Network Configuration</a></div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Mo Sha</div>
+            <div class="pub-venue">40th ACM/SIGAPP Symposium on Applied Computing (SAC&rsquo;25)</div>
+            <div class="pub-tags">
+              <span class="tag">Acceptance 5/21 = 23.8%</span>
+              <a class="tag tag-link" href="https://dl.acm.org/doi/10.1145/3672608.3707804" target="_blank" rel="noreferrer">ACM DL</a>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/sac25.pdf" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://openreview.net/forum?id=EIPLdFy3vp" target="_blank" rel="noreferrer">Parametric Augmentation for Time Series Contrastive Learning</a></div>
+            <div class="pub-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</div>
+            <div class="pub-venue">International Conference on Learning Representations (ICLR), May 2024</div>
+            <div class="pub-tags">
+              <span class="tag">Acceptance 2260/7262 = 31.1%</span>
+              <a class="tag tag-link" href="https://openreview.net/forum?id=EIPLdFy3vp" target="_blank" rel="noreferrer">OpenReview</a>
+            </div>
+          </li>
+          <li>
+            <div class="pub-title">Enabling Reliable Environmental Sensing with LoRa, Energy Harvesting, and Domain Adaptation</div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha</div>
+            <div class="pub-venue">IEEE ICCCN, July 2024</div>
+            <div class="pub-tags"><span class="tag">Acceptance 47/157 = 29.9%</span></div>
+          </li>
+          <li>
+            <div class="pub-title"><a href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank" rel="noreferrer">AutoTCL: Automated Time Series Contrastive Learning with Adaptive Augmentations</a></div>
+            <div class="pub-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</div>
+            <div class="pub-venue">AI4TS Workshop, August 2023</div>
+            <div class="pub-tags">
+              <span class="tag tag-award">Best Paper Award</span>
+              <a class="tag tag-link" href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank" rel="noreferrer">Paper</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3>Under Review</h3>
+        <ul class="pub-list">
+          <li>
+            <div class="pub-title">LLM-Based Noise-Aware Domain Adaptation Agent for Industrial Wireless Mesh Network Configuration</div>
+            <div class="pub-authors"><strong>Aitian Ma</strong>, Mo Sha</div>
+            <div class="pub-venue">Under review</div>
+            <div class="pub-tags"><span class="tag tag-review">In Submission</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="footnote">* Equal / co-first authorship.</p>
+
+        </div>
+      </details>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section section-divider" id="education">
+      <div class="section-heading">
+        <h2>Education</h2>
+      </div>
+      <div class="experience-list">
+        <div class="experience-entry">
+          <img class="experience-logo" src="images/logo-fiu.svg" alt="Florida International University logo" />
+          <div class="experience-content">
+            <h3>Ph.D. in Computer Science</h3>
+            <p class="experience-org">Florida International University</p>
+            <p class="experience-date">2022 &ndash; Expected December 2026</p>
+            <p class="experience-desc">Knight Foundation School of Computing and Information Sciences. Advised by Dr. Mo Sha; AI research co-advised by Dr. Dongsheng Luo.</p>
+          </div>
+        </div>
+        <div class="experience-entry">
+          <img class="experience-logo" src="images/logo-bjut.png" alt="Beijing University of Technology logo" />
+          <div class="experience-content">
+            <h3>M.S.</h3>
+            <p class="experience-org">Beijing University of Technology</p>
+            <p class="experience-desc">Beijing, China.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-divider" id="experience">
+      <div class="section-heading">
+        <h2>Experience</h2>
+      </div>
+      <div class="experience-list">
+        <div class="experience-entry">
+          <img class="experience-logo" src="images/logo-fiu.svg" alt="Florida International University logo" />
+          <div class="experience-content">
+            <h3>Graduate Research Assistant</h3>
+            <p class="experience-org">Florida International University</p>
+            <p class="experience-date">2022 &ndash; Present</p>
+            <p class="experience-desc">Knight Foundation School of Computing and Information Sciences. Time series forecasting and representation learning, and their deployment on resource-constrained sensing systems.</p>
+          </div>
+        </div>
+        <div class="experience-entry">
+          <img class="experience-logo experience-logo-square" src="images/logo-cas.png" alt="Chinese Academy of Sciences seal" />
+          <div class="experience-content">
+            <h3>System Administrator &amp; Instructor</h3>
+            <p class="experience-org">Chinese Academy of Sciences, Beijing</p>
+            <p class="experience-date">2013 &ndash; 2021</p>
+            <p class="experience-desc">Mentors: Daniel Dajun Zeng, Yihua Du. Taught the Big Data Platform Workshop and computer networking curriculum (2015&ndash;2019).</p>
+          </div>
+        </div>
+        <div class="experience-entry">
+          <img class="experience-logo" src="images/logo-ericsson.svg" alt="Ericsson logo" />
+          <div class="experience-content">
+            <h3>Software Engineer Intern</h3>
+            <p class="experience-org">Ericsson China, Beijing R&amp;D Center</p>
+            <p class="experience-date">Summer 2012</p>
+            <p class="experience-desc">Mentor: Ge Jiang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AWARDS ============ -->
+    <section class="section section-divider" id="awards">
+      <div class="section-heading">
+        <h2>Awards &amp; Honors</h2>
+      </div>
+      <ul class="award-list">
+        <li>
+          <span class="year">2025</span>
+          <span class="what"><strong>Young Gladiators Fellowship</strong> &mdash; <em>Northeastern University</em></span>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <span class="what"><strong>Best Paper Award Nominee</strong> &mdash; <em>IEEE DCOSS-IoT</em></span>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <span class="what"><strong>FIU UGS Travel Award</strong> &mdash; <em>Academy of Science, Engineering, and Medicine of Florida (ASEMFL) Annual Conference</em></span>
+        </li>
+        <li>
+          <span class="year">2023</span>
+          <span class="what"><strong>Best Paper Award</strong> &mdash; <em>AI4TS Workshop</em></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ TEACHING ============ -->
+    <section class="section section-divider" id="teaching">
+      <div class="section-heading">
+        <h2>Teaching &amp; Mentoring</h2>
+        <span class="heading-note">Florida International University</span>
+      </div>
+
+      <p class="sub-label">Teaching Assistant</p>
+      <table class="simple-table">
+        <thead>
+          <tr><th>Course</th><th>Title</th><th>Semester</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>COP 4338</td><td>Programming III</td><td>Fall 2024</td></tr>
+          <tr><td>COP 5522</td><td>Parallel and Distributed Computing</td><td>Spring 2024</td></tr>
+          <tr><td>COP 4710</td><td>Database Management</td><td>Fall 2023</td></tr>
+          <tr><td>CEN 4010</td><td>Software Engineering</td><td>Spring 2023</td></tr>
+          <tr><td>COP 4610</td><td>Operating Systems</td><td>Fall 2022</td></tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Research Mentoring</p>
+      <ul class="interest-list">
+        <li>REU Student Mentor, 2022&ndash;2025 <span>&mdash; mentored 10+ undergraduate students</span></li>
+        <li>Instructor, Chinese Academy of Sciences, 2015&ndash;2019 <span>&mdash; Big Data Platform Workshop &amp; computer networking curriculum</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ SERVICE ============ -->
+    <section class="section section-divider" id="service">
+      <div class="section-heading">
+        <h2>Professional Service</h2>
+      </div>
+
+      <p class="sub-label">Conference Reviewer</p>
+      <div class="chip-row">
+        <span class="chip">NeurIPS &rsquo;26</span>
+        <span class="chip">ICLR &rsquo;26</span>
+        <span class="chip">ICASSP &rsquo;26</span>
+        <span class="chip">SAC &rsquo;26</span>
+        <span class="chip">DCOSS-IoT &rsquo;26</span>
+        <span class="chip">SECON &rsquo;26</span>
+        <span class="chip">ACDSA &rsquo;26</span>
+        <span class="chip">ICMLA &rsquo;25</span>
+        <span class="chip">DCOSS-IoT &rsquo;25</span>
+        <span class="chip">MASS &rsquo;25</span>
+        <span class="chip">LCN &rsquo;25</span>
+        <span class="chip">CIT &rsquo;25</span>
+      </div>
+
+      <p class="sub-label">Journal Reviewer</p>
+      <div class="chip-row">
+        <span class="chip">IEEE TKDE</span>
+        <span class="chip">IEEE TC</span>
+        <span class="chip">IEEE TMC</span>
+        <span class="chip">IEEE TNNLS</span>
+        <span class="chip">Measurement Science and Technology</span>
+        <span class="chip">Computers in Biology and Medicine</span>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-divider" id="contact">
+      <div class="section-heading">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-card">
+        <p class="prose" style="margin:0;">
+          I am on the job market for the 2026&ndash;2027 cycle, looking for faculty and research scientist roles in
+          time series modeling and efficient machine learning. I am always glad to hear from people working on
+          related problems &mdash; please reach out.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:ama003@fiu.edu">ama003@fiu.edu</a>
+          <a href="https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://github.com/aitianma" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/aitian-ma-4267404a/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>&copy; 2026 Aitian Ma &middot; Miami, FL</span>
+        <span>Knight Foundation School of Computing and Information Sciences, FIU</span>
+      </div>
+      <a class="visitor-map" href="https://mapmyvisitors.com/web/1c07w" title="Visitor map" target="_blank" rel="noreferrer">
+        <img src="https://mapmyvisitors.com/map.png?d=rgw6i8m36D2rRoR1e0MMjjXAjviZkdVjTg_eDE6Ebzw&amp;cl=667eea" alt="Map of site visitors" loading="lazy" />
+      </a>
+    </footer>
+
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img class="lightbox-image" id="lightbox-image" src="" alt="" />
 </div>
 
-<!-- Header -->
-<div class="header">
-    <h1> Aitian Ma (马艾田)</h1>
-    <h3>Ph.D. Candidate in Computer Science</h3>
-    <p><strong>Knight Foundation School of Computing and Information Sciences</strong></p>
-    <p><strong>Florida International University</strong></p>
-    <p>📍 Miami, FL, USA</p>
-    <p>🎓 Graduate Estimated in December 2026</p>
-    <div class="job-market">🎯 On the Job Market (2026-2027)</div>
-    
-    <div class="badges">
-        <a class="badge" href="https://www.linkedin.com/in/aitian-ma-4267404a/" target="_blank">
-            <img src="https://img.shields.io/badge/LinkedIn-aitian--ma-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-        <a class="badge" href="https://scholar.google.com/citations?user=fsVMRlsAAAAJ&hl=en" target="_blank">
-            <img src="https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar">
-        </a>
-        <a class="badge" href="https://github.com/aitianma" target="_blank">
-            <img src="https://img.shields.io/badge/GitHub-aitianma-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-        </a>
-        <a class="badge" href="/cdn-cgi/l/email-protection#77161a1647474437111e0259121302">
-            <img src="https://img.shields.io/badge/Email-ama003@fiu.edu-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-        </a>
-    </div>
-    
-    <div style="margin-top: 15px;">
-        <img src="https://komarev.com/ghpvc/?username=aitianma&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile Views">
-    </div>
-</div>
+<script>
+(function () {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImage = document.getElementById('lightbox-image');
+  var closeBtn = lightbox.querySelector('.lightbox-close');
 
-<!-- About -->
-<section id="about">
-    <h2>🎯 About Me</h2>
-    <div class="blockquote">
-        <strong>Seeking Faculty & Research Scientist Positions in Time Series Modeling, AIoT, Wireless Sensing, and Edge Learning Systems</strong>
-    </div>
-    <p>I am a Ph.D. candidate at <strong>Florida International University</strong>, advised by <strong><a href="https://users.cs.fiu.edu/~msha/" target="_blank">Dr. Mo Sha</a></strong>. My research focuses on making wireless sensing and communication systems more <strong>reliable</strong>, <strong>efficient</strong>, and <strong>intelligent</strong> through AIoT and edge learning. My AI-related work is co-advised by 
-  <a href="https://users.cs.fiu.edu/~dluo/" target="_blank"><strong>Dr. Dongsheng Luo</strong></a>. Before joining FIU, I earned my M.S. from Beijing University of Technology. 
-</p>
-    <!-- <p>Before joining FIU, I earned my M.S. from Beijing University of Technology and worked as a <strong>System Administrator & Instructor</strong> at the Chinese Academy of Sciences (2013–2021).</p> -->
-    
-    <div class="research-interests">
-        <h3 style="margin-bottom: 15px;">🔬 Research Interests</h3>
-        <div>🌐 Reliable and Adaptive Wireless Sensing</div>
-        <div>🤖 Resource-Efficient Edge Learning</div>
-        <div>📡 AI for Internet of Things (AIoT)</div>
-        <div>🔧 Intelligent Cyber-Physical Systems</div>
-    </div>
-</section>
+  function open(src, alt) {
+    lightboxImage.src = src;
+    lightboxImage.alt = alt || '';
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
 
-<!-- News Section -->
-<section id="news">
-    <h2>📰 News</h2>
-    <div class="news-container">
-            <div class="news-item">
-            <div class="news-date">March 2026</div>
-            <div>
-                <span class="news-tag">Paper</span>
-                Our paper <strong>"Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning"</strong> has been accepted to <strong>DCOSS-IoT 2026</strong>.
-                <br>
-                <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank">[Paper]</a> | 
-            </div>
-            </div>
+  function close() {
+    lightbox.classList.remove('is-open');
+    lightboxImage.src = '';
+    document.body.style.overflow = '';
+  }
 
-            <div class="news-item">
-            <div class="news-date">January 2026</div>
-        
-            <div>
-                <span class="news-tag">Paper</span>
-                Our paper <strong>"MixLinear: Extreme Low Resource Multivariate Time Series Forecasting with 0.1 K Parameters"</strong> has been accepted to <strong>ICLR 2026</strong>.
-                <br>
-                <a href="https://arxiv.org/abs/2410.02081" target="_blank">[Paper]</a> | 
-                <a href="https://github.com/aitianma/MixLinear" target="_blank">[Code]</a> | 
-                <a href="https://recorder-v3.slideslive.com/#/share?share=108680&s=4eeab25b-f387-4749-88fd-562b4baea0e9" target="_blank">[Slides/Video]</a>
-            </div>
-        </div>
-        <div class="news-item">
-            <div class="news-date">November 2025</div>
-            <div>
-                <span class="news-tag">Paper</span>
-                Our paper <strong>"MMFNet: Multi-Scale Frequency Masking Neural Network for Time Series Forecasting"</strong> has been accepted to <strong>SAC'26</strong>.
-                <br>
-                <a href="https://arxiv.org/abs/2410.02070" target="_blank">[Paper]</a> | 
-                <a href="https://github.com/aitianma/MMFNet" target="_blank">[Code]</a>
-            </div>
-        </div>
-    </div>
-</section>
+  document.querySelectorAll('[data-lightbox]').forEach(function (img) {
+    img.addEventListener('click', function () { open(img.src, img.alt); });
+  });
 
-<!-- Publications -->
-<section id="publications">
-    <h2>📚 Publications</h2>
-    
-    <div class="pub-stats">
-        <div class="stat-card">
-            <h3>11</h3>
-            <p>Conference Papers</p>
-        </div>
-        <div class="stat-card">
-            <h3>1</h3>
-            <p>Journal Paper</p>
-        </div>
-        <div class="stat-card">
-            <h3>2</h3>
-            <p>Best Paper Awards</p>
-        </div>
-    </div>
-    
-    <h3>🎓 Conference Papers</h3>
-    
-    <h4 style="color: #667eea; margin: 20px 0 10px 0;">📝 Under Review</h4>
-    
-    <table class="pub-table">
-        <thead>
-            <tr>
-                <th style="width: 20%;">Visual</th>
-                <th style="width: 80%;">Publication Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                        <strong style="color: #667eea; font-size: 2em;">🔬</strong>
-                    </div>
-                </td>
-                <td>
-                    <div class="pub-title">🔷 LLM-Based Noise-Aware Domain Adaptation Agent for Industrial Wireless Mesh Network Configuration</div>
-                    <div class="pub-authors"><strong>Aitian Ma</strong>, Mo Sha</div>
-                    <div class="pub-venue">📅 Under Review</div>
-                </td>
-            </tr>
-            
-            
-            
-            
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 
-        </tbody>
-    </table>
-    
-    <h4 style="color: #667eea; margin: 30px 0 10px 0;">✅ Published</h4>
-    
-    <details open>
-        <summary><strong>Click to expand/collapse</strong></summary>
-        <br>
-        
-        <table class="pub-table">
-            <thead>
-                <tr>
-                    <th style="width: 20%;">Visual</th>
-                    <th style="width: 80%;">Publication Details</th>
-                </tr>
-            </thead>
-            <tbody>
+  // Active nav highlighting
+  var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
 
-                <tr>
-                <td>
-                    <img src="images/MixLinear.png" alt="ICLR 2026" class="pub-image">
-                </td>
-                <td>
-                    <div class="pub-title">
-                        🔷 MixLinear: Extreme Low-Resource Multivariate Time Series Forecasting with 0.1K Parameters
-                    </div>
-                    <div class="pub-authors">
-                        <strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha
-                    </div>
-                    <div class="pub-venue">
-                        📄 <strong>ICLR 2026</strong>
-                    </div>
-                     <div class="pub-links">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/iclr26.pdf" class="pub-link" target="_blank">📄 Paper</a>
-                            <a href="https://github.com/aitianma/MixLinear" class="pub-link" target="_blank">💻 Code</a>
-                    </div>
-                </td>
-            </tr>
+  if ('IntersectionObserver' in window && sections.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.style.color = '';
+          a.style.background = '';
+        });
+        var active = links[sections.indexOf(entry.target)];
+        if (active) {
+          active.style.color = 'var(--accent)';
+          active.style.background = 'rgba(102, 126, 234, 0.12)';
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+})();
+</script>
 
-                
-                <tr>
-                    <td>
-                        <img src="images/MMFNet.png" alt="SAC 2026" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank">
-                                🔷 MMFNet: Multi-Scale Frequency Masking Neural Network for Multivariate Time Series Forecasting
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Mo Sha</div>
-                        <div class="pub-venue">📅 Proceedings of the 41st ACM/SIGAPP Symposium on Applied Computing (SAC'26)</div>  
-                        <span class="acceptance-rate">📊 Acceptance Ratio: 26/104 = 25%</span>
-                        <div class="pub-links">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" class="pub-link" target="_blank">📄 Paper</a>
-                            <a href="https://github.com/aitianma/MMFNet" class="pub-link" target="_blank">💻 Code</a>
-                        </div>
-                    </td>
-                </tr>
-
-               <tr>
-                    <td>
-                        <img src="images/LLMNet.png" alt="DCOSS-IoT 2026" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank">
-                                🔷 Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Ali Maatouk(Yale), Rex Ying(Yale), Mo Sha</div>
-                        <div class="pub-venue">📅 Proceedings of the 22nd International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT 2026)</div>
-                        <div class="pub-links">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" class="pub-link" target="_blank">📄 Paper</a>
-                        </div>
-                    </td>
-                </tr>
-
-                
-                <tr>
-                    <td>
-                        <img src="images/1loradoc.png" alt="ICMLA 2025" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" target="_blank">
-                                🔷 LLM-Driven Diagnosis and Adaptive Policy Optimization for Reducing Packet Error Rate in LoRaWAN Networks
-                            </a>
-                        </div>
-                        <div class="pub-authors">Dongyi Ma (UCL), <strong>Aitian Ma</strong> (co-first author), Sirui Luo (UCL), Martin de Jode (UCL), Andrew Hudson-Smith (UCL), Mo Sha</div>
-                        <div class="pub-venue">📅 IEEE ICMLA, Special Session on Deep Learning and Applications, December 2025</div>
-                        <span class="acceptance-rate">📊 Acceptance Rate: 16.6% (15/90)</span>
-                        <div class="pub-links">
-                            <a href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" class="pub-link" target="_blank">📄 Paper</a>
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/2loratemp.png" alt="DCOSS-IoT 2025" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://ieeexplore.ieee.org/document/11096212" target="_blank">
-                                🔷 Sensorless Air Temperature Sensing Using LoRa Link Characteristics
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha, Dongsheng Luo</div>
-                        <div class="pub-venue">📅 IEEE DCOSS-IoT, June 2025</div>
-                        <span class="acceptance-rate">📊 Acceptance Rate: 23.6% (26/110)</span>
-                        <span class="award-badge">🏆 Best Paper Award Nominee</span>
-                        <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/11096212" class="pub-link" target="_blank">📄 IEEE Xplore</a>
-                            <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2025.pdf" class="pub-link" target="_blank">📄 Paper</a>
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/3loraenv.png" alt="MetroLivEnv 2025" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://ieeexplore.ieee.org/document/11107002" target="_blank">
-                                🔷 A LoRa-Based Energy-Harvesting Sensing System for Living Environment
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha</div>
-                        <div class="pub-venue">📅 IEEE MetroLivEnv, June 2025</div>
-                        <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/11107002" class="pub-link" target="_blank">📄 IEEE Xplore</a>
-                            <a href="https://users.cs.fiu.edu/~msha/publications/MetroLivEnv25.pdf" class="pub-link" target="_blank">📄 Paper</a>
-
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/4wmncda.png" alt="ACM SAC 2025" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://dl.acm.org/doi/10.1145/3672608.3707804" target="_blank">
-                                🔷 WMN-CDA: Contrastive Domain Adaptation for Wireless Mesh Network Configuration
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Mo Sha</div>
-                        <div class="pub-venue">📅 Proceedings of the 40th ACM/SIGAPP Symposium on Applied Computing (SAC'25)</div>
-                        <span class="acceptance-rate">📊 Acceptance Rate: 23.8% (5/21)</span>
-                        <div class="pub-links">
-                            <a href="https://dl.acm.org/doi/10.1145/3672608.3707804" class="pub-link" target="_blank">📄 ACM SAC</a>
-                            <a href="https://users.cs.fiu.edu/~msha/publications/sac25.pdf" class="pub-link" target="_blank">📄 Paper</a>
-
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/5lorapower.png" alt="ICCCN 2024" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://ieeexplore.ieee.org/document/11107002" target="_blank">
-                                🔷 Enabling Reliable Environmental Sensing with LoRa, Energy Harvesting, and Domain Adaptation
-                            </a>
-                        </div>
-                        <div class="pub-authors"><strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha</div>
-                        <div class="pub-venue">📅 IEEE ICCCN, July 2024</div>
-                        <span class="acceptance-rate">📊 Acceptance Rate: 29.9% (47/157)</span>
-                        <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/11107002" class="pub-link" target="_blank">📄 IEEE Xplore</a>
-                            <a href="https://users.cs.fiu.edu/~msha/publications/MetroLivEnv25.pdf" class="pub-link" target="_blank">📄 Paper</a>
-
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/6para.png" alt="ICLR 2024" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title">
-                            <a href="https://openreview.net/forum?id=EIPLdFy3vp" target="_blank">
-                                🔷 Parametric Augmentation for Time Series Contrastive Learning
-                            </a>
-                        </div>
-                        <div class="pub-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</div>
-                        <div class="pub-venue">📅 ICLR, May 2024</div>
-                        <span class="acceptance-rate">📊 Acceptance Rate: 31.1% (2260/7262)</span>
-                        <div class="pub-links">
-                            <a href="https://openreview.net/forum?id=EIPLdFy3vp" class="pub-link" target="_blank">📄 OpenReview</a>
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="images/7autotcl.png" alt="AI4TS 2023" class="pub-image">
-                    </td>
-                    <td>
-                        <div class="pub-title"> 
-                            <a href="https://users.cs.fiu.edu/~msha/publications/AI4TS2023.pdf" target="_blank">
-                                🔷 AutoTCL: Automated Time Series Contrastive Learning with Adaptive Augmentations
-                            </a>
-                        </div>
-                        <div class="pub-authors">Xu Zheng, Tianchun Wang, Wei Cheng, <strong>Aitian Ma</strong>, Haifeng Chen, Mo Sha, Dongsheng Luo</div>
-                        <div class="pub-venue">📅 AI4TS Workshop, August 2023</div>
-                        <span class="award-badge">🏆 Best Paper Award</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </details>
-    
-    <h3>📖 Journal Papers</h3>
-    
-    <table class="pub-table">
-        <thead>
-            <tr>
-                <th style="width: 20%;">Visual</th>
-                <th style="width: 80%;">Publication Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <img src="images/1_j_teacherstudent.png" alt="IEEE ToN 2024" class="pub-image">
-                </td>
-                <td>
-                    <div class="pub-title">
-                        <a href="https://ieeexplore.ieee.org/document/10328686" target="_blank">
-                            🔷 Adapting Wireless Network Configuration from Simulation to Reality via Deep Learning based Domain Adaptation
-                        </a>
-                    </div>
-                    <div class="pub-authors">Junyang Shi, <strong>Aitian Ma</strong>, Xia Cheng, Mo Sha, Xi Peng</div>
-                    <div class="pub-venue">📅 IEEE/ACM Transactions on Networking</div>
-                    <div style="margin-top: 5px; color: #5a6c7d;">📖 Vol. 32, Issue 3, pp. 1983–1998, June 2024</div>
-                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/document/10328686" class="pub-link" target="_blank">📄 IEEE Xplore</a>
-                    </div>
-                </td>
-            </tr>
-
-    <tr>
-                <td>
-                    <img src="images/FeatureMasking_Alg.png" alt="Configuring Industrial Wireless Mesh Networks" class="pub-image">
-                </td>
-                <td>
-                    <div class="pub-title">
-                        🔷 Configuring Industrial Wireless Mesh Networks via Multi-Source Domain Adaptation and Feature Masking
-                    </div>
-                    <div class="pub-authors">
-                        Xia Cheng*, <strong>Aitian Ma*</strong>, Dong Chen, Mo Sha
-                    </div>
-                    <div style="font-size: 0.9em; color: #666; margin-top: 2px; font-style: italic;">
-                        (* Both authors contributed equally to this work)
-                    </div>
-                    <div class="pub-venue" style="margin-top: 5px;">
-                        📅 <strong>ACM Transactions on Sensor Networks (TOSN)</strong>
-                    </div>
-                    <div style="margin-top: 5px; color: #5a6c7d;">
-                        📖 Accepted, June 2026
-                    </div>
-                    <!-- <div class="pub-links" style="margin-top: 5px;">
-                        <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2025.pdf" 
-                           class="pub-link" target="_blank">
-                            📄 Preprint (Conference Version)
-                        </a>
-                    </div> -->
-                </td>
-            </tr>
-            
-    <tr>
-    <td>
-        <img src="images/2loratemp.png" alt="Sensorless Air Temperature Sensing Using LoRa" class="pub-image">
-    </td>
-    <td>
-        <div class="pub-title">
-            🔷 Sensorless Air Temperature Sensing Using LoRa Link Characteristics
-        </div>
-        <div class="pub-authors">
-            <strong>Aitian Ma</strong>, Jean Tonday Rodriguez, Mo Sha, Dongsheng Luo
-        </div>
-        <div class="pub-venue">
-            📄 Under Review at <strong>ACM Transactions on Sensor Networks (TOSN)</strong>
-        </div>
-        <span class="review-status">
-            🔄 Major Revision
-        </span>
-        <div class="pub-links">
-            <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2025.pdf" 
-               class="pub-link" target="_blank">
-                📄 Preprint (Conference Version)
-            </a>
-        </div>
-    </td>
-</tr>
-
-        </tbody>
-    </table>
-</section>
-
-<!-- Awards -->
-<section id="awards">
-    <h2>🏆 Awards & Honors</h2>
-    
-    <table class="awards-table">
-        <thead>
-            <tr>
-                <th style="width: 15%;">Year</th>
-                <th>Award</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>2025</strong></td>
-                <td>🌟 Young Gladiators Fellowship, <em>Northeastern University</em></td>
-            </tr>
-            <tr>
-                <td><strong>2025</strong></td>
-                <td>🏆 Best Paper Award Nominee, <em>IEEE DCOSS-IoT</em></td>
-            </tr>
-            <tr>
-                <td><strong>2025</strong></td>
-                <td>🎓 FIU UGS Travel Award for the Academy of Science, Engineering, and Medicine of Florida (ASEMFL) Annual Conference</td>
-            </tr>
-            <tr>
-                <td><strong>2023</strong></td>
-                <td>🏆 Best Paper Award, <em>AI4TS Workshop</em></td>
-            </tr>
-            <!-- <tr>
-                <td><strong>2011</strong></td>
-                <td>🥉 3rd Place, <em>Microsoft HPC Campus Programming Competition</em></td>
-            </tr>
-            <tr>
-                <td><strong>2007-2008</strong></td>
-                <td>🎓 National Encouragement Scholarship, <em>Henan Agricultural University</em></td>
-            </tr> -->
-        </tbody>
-    </table>
-</section>
-
-<!-- Experience -->
-<section id="experience">
-    <h2>💼 Experience</h2>
-    
-    <h3>🎓 Academic & Research</h3>
-    
-    <div class="exp-card">
-        <div class="exp-date">2022 – Present</div>
-        <div class="exp-title">Ph.D. Graduate Research Assistant</div>
-        <div class="exp-org">Florida International University</div>
-        <p>Knight Foundation School of Computing and Information Sciences</p>
-    </div>
-    
-    <div class="exp-card">
-        <div class="exp-date">2013 – 2021</div>
-        <div class="exp-title">System Administrator & Instructor</div>
-        <div class="exp-org">Chinese Academy of Sciences, Beijing</div>
-        <p>Mentors: Daniel Dajun Zeng, Yihua Du</p>
-    </div>
-    
-    <h3>💻 Industry</h3>
-    
-    <div class="exp-card">
-        <div class="exp-date">2012 (Summer)</div>
-        <div class="exp-title">Software Engineer Intern</div>
-        <div class="exp-org">Ericsson China, Beijing R&D Center</div>
-        <p>Mentor: Ge Jiang</p>
-    </div>
-</section>
-
-<!-- Teaching -->
-<section id="teaching">
-    <h2>👨‍🏫 Teaching & Mentoring</h2>
-    
-    <h3>📚 Teaching Assistant — Florida International University</h3>
-    
-    <table class="pub-table">
-        <thead>
-            <tr>
-                <th style="width: 20%;">Course</th>
-                <th style="width: 50%;">Title</th>
-                <th style="width: 30%;">Semester</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>COP 4338</strong></td>
-                <td>Programming III</td>
-                <td>Fall 2024</td>
-            </tr>
-            <tr>
-                <td><strong>COP 5522</strong></td>
-                <td>Parallel and Distributed Computing</td>
-                <td>Spring 2024</td>
-            </tr>
-            <tr>
-                <td><strong>COP 4710</strong></td>
-                <td>Database Management</td>
-                <td>Fall 2023</td>
-            </tr>
-            <tr>
-                <td><strong>CEN 4010</strong></td>
-                <td>Software Engineering</td>
-                <td>Spring 2023</td>
-            </tr>
-            <tr>
-                <td><strong>COP 4610</strong></td>
-                <td>Operating Systems</td>
-                <td>Fall 2022</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <h3>🎯 Research Mentoring</h3>
-    <ul style="margin-left: 20px;">
-        <li><strong>REU Student Mentor</strong> (2022–2025) — Mentored <strong>10+ undergraduate students</strong></li>
-        <li><strong>Instructor</strong> — Chinese Academy of Sciences (2015–2019)<br><em>Big Data Platform Workshop & Computer Networking Curriculum</em></li>
-    </ul>
-</section>
-
-<!-- Skills -->
-<section id="skills">
-    <h2>🔧 Technical Skills</h2>
-    
-    <table class="skills-table">
-        <thead>
-            <tr>
-                <th style="width: 25%;">Category</th>
-                <th>Technologies</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>💻 Programming</strong></td>
-                <td>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C/C++</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">CUDA</span>
-                    <span class="skill-tag">JavaScript</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>🤖 ML Frameworks</strong></td>
-                <td>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">Distributed Training</span>
-                    <span class="skill-tag">Model Optimization</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>🛠️ Systems</strong></td>
-                <td>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Spark</span>
-                    <span class="skill-tag">Kafka</span>
-                    <span class="skill-tag">Elasticsearch</span>
-                    <span class="skill-tag">Neo4j</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>🎯 Focus Areas</strong></td>
-                <td>
-                    <span class="skill-tag">Wireless Sensing</span>
-                    <span class="skill-tag">Edge AI</span>
-                    <span class="skill-tag">Resource-Efficient Learning</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<!-- Service -->
-<section id="service">
-    <h2>🤝 Professional Service</h2>
-    
-    <h3>👥 Reviewer for Conferences</h3>
-    <div class="exp-card">
-        <div class="pub-authors">
-            <span class="skill-tag">NeurIPS '26</span>
-            <span class="skill-tag">ICLR '26</span>
-            <span class="skill-tag">DCOSS-IoT '26</span>
-            <span class="skill-tag">ICASSP '26</span>
-            <span class="skill-tag">SAC '26</span>
-            <span class="skill-tag">ACDSA '26</span>
-            <span class="skill-tag">SECON '26</span>
-            <span class="skill-tag">DCOSS-IoT '25</span>
-            <span class="skill-tag">MASS '25</span>
-            <span class="skill-tag">LCN '25</span>
-            <span class="skill-tag">CIT '25</span>
-            <span class="skill-tag">ICMLA '25</span>
-        </div>
-    </div>
-    
-    <h3>📖 Reviewer for Journals</h3>
-    <table class="pub-table">
-        <tbody>
-            <tr>
-                <td style="width: 15%; text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">📊</strong>
-                </td>
-                <td>
-                    <div class="pub-title">IEEE Transactions on Knowledge and Data Engineering</div>
-                    <div class="pub-authors">TKDE</div>
-                </td>
-            </tr>
-           <tr>
-                <td style="text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">💻</strong>
-                </td>
-                <td>
-                    <div class="pub-title">IEEE Transactions on Computers</div>
-                    <div class="pub-authors">TC</div>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">📱</strong>
-                </td>
-                <td>
-                    <div class="pub-title">IEEE Transactions on Mobile Computing</div>
-                    <div class="pub-authors">TMC</div>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">🧠</strong>
-                </td>
-                <td>
-                    <div class="pub-title">IEEE Transactions on Neural Networks and Learning Systems</div>
-                    <div class="pub-authors">TNNLS</div>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">🔬</strong>
-                </td>
-                <td>
-                    <div class="pub-title">Measurement Science and Technology</div>
-                    <div class="pub-authors">MEAS</div>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;">
-                    <strong style="color: #667eea; font-size: 1.5em;">🏥</strong>
-                </td>
-                <td>
-                    <div class="pub-title">Computers in Biology and Medicine</div>
-                    <div class="pub-authors">CIBM</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<a href="https://mapmyvisitors.com/web/1c07w"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=rgw6i8m36D2rRoR1e0MMjjXAjviZkdVjTg_eDE6Ebzw&cl=ffffff" /></a>
-
-
- </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
