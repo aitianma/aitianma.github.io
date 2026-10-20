@@ -856,7 +856,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
       <dl class="intro-stats">
         <div>
           <dt>Research Focus</dt>
-          <dd>Time Series Modeling</dd>
+          <dd>Efficient AI for Time Series &amp; AIoT</dd>
         </div>
         <div>
           <dt>Expected Graduation</dt>
@@ -897,10 +897,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
     <!-- ============ HERO / ABOUT ============ -->
     <section class="section hero" id="about">
-      <p class="eyebrow">Time Series &middot; Efficient Deep Learning</p>
+      <p class="eyebrow">Efficient AI &middot; Time Series &middot; LLMs for AIoT</p>
       <h1>
         Aitian Ma
-        <small>Building small, fast, and reliable models for time series.</small>
+        <small>Building small, fast, and reliable AI for time series and connected systems.</small>
       </h1>
 
       <span class="job-pill">On the academic &amp; industry job market, 2026&ndash;2027</span>
@@ -909,17 +909,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
         I am a Ph.D. candidate in Computer Science at <strong>Florida International University</strong>,
         advised by <a href="https://users.cs.fiu.edu/~msha/" target="_blank" rel="noreferrer">Dr. Mo Sha</a>
         and co-advised on AI research by <a href="https://users.cs.fiu.edu/~dluo/" target="_blank" rel="noreferrer">Dr. Dongsheng Luo</a>.
-        My research is on <strong>time series modeling</strong>: how to forecast and represent temporal data
-        accurately with a fraction of the parameters, data, and energy that current models demand.
+        My research builds <strong>efficient AI for time series and networked systems</strong>: forecasting
+        accurately with a fraction of the parameters, data, and energy that current models demand, and using
+        LLM reasoning to configure and diagnose real-world wireless networks. I collaborate with
+        <strong>Yale University</strong> (Rex Ying's group) on LLM-driven network configuration and with
+        <strong>University College London</strong> (Bartlett CASA) on LLM-based diagnosis for urban LoRaWAN deployments.
       </p>
 
       <div class="interest-block">
         <p class="interest-title">Research Interests</p>
         <ul class="interest-list">
-          <li>Time Series Forecasting <span>&mdash; lightweight architectures, frequency-domain modeling, long-horizon accuracy</span></li>
-          <li>Time Series Representation Learning <span>&mdash; contrastive learning, learnable and adaptive augmentation</span></li>
-          <li>Resource-Efficient &amp; Edge Deployment <span>&mdash; sub-kilobyte models, on-device inference, energy-aware training</span></li>
-          <li>Time Series for AIoT <span>&mdash; sensing, domain adaptation, and reliable wireless systems</span></li>
+          <li>Efficient Time Series Learning <span>&mdash; lightweight and frequency-domain forecasters, self-supervised representation learning, compression for time-series foundation models</span></li>
+          <li>LLM Reasoning for Networked Systems <span>&mdash; LLM-driven configuration of industrial wireless mesh networks, diagnosis and policy optimization for LoRaWAN</span></li>
+          <li>AIoT &amp; Sensorless Sensing <span>&mdash; inferring the environment from wireless link signals, domain adaptation, energy-harvesting sensing</span></li>
         </ul>
       </div>
     </section>
@@ -928,7 +930,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     <section class="section section-divider" id="selected">
       <div class="section-heading">
         <h2>Selected Papers</h2>
-        <span class="heading-note">Time series work</span>
+        <span class="heading-note">Time series &amp; LLMs for networked systems</span>
       </div>
 
       <div class="paper-list">
@@ -991,6 +993,65 @@ button, a { -webkit-tap-highlight-color: transparent; }
                 <a href="https://users.cs.fiu.edu/~msha/publications/sac26.pdf" target="_blank" rel="noreferrer">Paper</a>
                 <a href="https://arxiv.org/abs/2410.02070" target="_blank" rel="noreferrer">arXiv</a>
                 <a href="https://github.com/aitianma/MMFNet" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LLMNet -->
+        <article class="paper-item" id="llmnet">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/LLMNet.png" alt="LLMNet dual-mind reasoning framework overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">DCOSS-IoT 2026</span>
+                  <span class="badge badge-secondary">w/ Yale</span>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">LLMNet: Configuring Industrial Wireless Mesh Network via Dual-Mind Reasoning</a></h3>
+              <p class="paper-authors"><strong>Aitian Ma</strong>, Dongsheng Luo, Ali Maatouk (Yale), Rex Ying (Yale), Mo Sha</p>
+              <p class="paper-summary">
+                Industrial mesh network configurations tuned in simulators often break once deployed, and closing
+                that gap usually means hundreds of on-site measurements. LLMNet configures the network with an LLM
+                instead: multipath self-consistent Chain-of-Thought stabilizes decisions, domain knowledge editing
+                corrects simulation-to-reality mismatches using expert priors, and a fast/slow dual-mind design
+                balances quick heuristics against deliberate optimization. Across four simulators and a 50-node
+                WirelessHART testbed it improves configuration accuracy by up to <strong>40%</strong> without
+                collecting real-world data.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/dcoss2026-1.pdf" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LoRaDoctor -->
+        <article class="paper-item" id="loradoctor">
+          <div class="paper-body">
+            <img class="paper-thumb" src="images/1loradoc.png" alt="LoRaDoctor LLM-driven diagnosis framework overview" data-lightbox />
+            <div class="paper-content">
+              <div class="paper-head">
+                <div class="paper-meta-line">
+                  <span class="badge">ICMLA 2025</span>
+                  <span class="badge badge-secondary">Acceptance 16.6%</span>
+                  <span class="badge badge-secondary">w/ UCL</span>
+                </div>
+              </div>
+              <h3><a href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" target="_blank" rel="noreferrer">LoRaDoctor: LLM-Driven Diagnosis and Adaptive Policy Optimization for Reducing Packet Error Rate in LoRaWAN Networks</a></h3>
+              <p class="paper-authors">Dongyi Ma* (UCL), <strong>Aitian Ma*</strong>, Sirui Luo (UCL), Martin de Jode (UCL), Andrew Hudson-Smith (UCL), Mo Sha &nbsp;<em>(* equal contribution)</em></p>
+              <p class="paper-summary">
+                Urban LoRaWAN deployments lose packets for reasons that rule-based ADR and supervised models
+                can't untangle. LoRaDoctor is the first framework to use LLMs for LoRaWAN optimization: it diagnoses
+                the causes of packet error, generates regulation-compliant transmission policies, and predicts their
+                effect, with explanations operators can read. On a year of data from eight sensors in East London,
+                it identifies path loss, temperature, and human activity as the main causes. Its integrated
+                policies achieve the lowest packet error rate at every site, bringing the worst site from over
+                <strong>20%</strong> to under <strong>10%</strong>.
+              </p>
+              <div class="link-row">
+                <a href="https://users.cs.fiu.edu/~msha/publications/icmla25.pdf" target="_blank" rel="noreferrer">Paper</a>
               </div>
             </div>
           </div>
@@ -1325,21 +1386,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
       <p class="sub-label">Conference Reviewer</p>
       <div class="chip-row">
-        
         <span class="chip">ICLR &rsquo;27</span>
         <span class="chip">ICLR &rsquo;26</span>
         <span class="chip">NeurIPS &rsquo;26</span>
         <span class="chip">ICASSP &rsquo;27</span>
         <span class="chip">ICASSP &rsquo;26</span>
-        <!-- <span class="chip">SAC &rsquo;26</span>
-        <span class="chip">DCOSS-IoT &rsquo;26</span>
-        <span class="chip">SECON &rsquo;26</span>
-        <span class="chip">ACDSA &rsquo;26</span>
-        <span class="chip">ICMLA &rsquo;25</span>
-        <span class="chip">DCOSS-IoT &rsquo;25</span>
-        <span class="chip">MASS &rsquo;25</span>
-        <span class="chip">LCN &rsquo;25</span>
-        <span class="chip">CIT &rsquo;25</span> -->
       </div>
 
       <p class="sub-label">Journal Reviewer</p>
@@ -1348,8 +1399,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
         <span class="chip">IEEE TC</span>
         <span class="chip">IEEE TMC</span>
         <span class="chip">IEEE TNNLS</span>
-        <!-- <span class="chip">Measurement Science and Technology</span>
-        <span class="chip">Computers in Biology and Medicine</span> -->
       </div>
     </section>
 
@@ -1361,7 +1410,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
       <div class="contact-card">
         <p class="prose" style="margin:0;">
           I am on the job market for the 2026&ndash;2027 cycle, looking for faculty and research scientist roles in
-          time series modeling and efficient machine learning. I am always glad to hear from people working on
+          efficient AI for time series, LLMs for networked systems, and AIoT. I am always glad to hear from people working on
           related problems &mdash; please reach out.
         </p>
         <div class="contact-links">
